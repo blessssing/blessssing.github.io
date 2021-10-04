@@ -6,6 +6,7 @@ import { Menu, Label } from "semantic-ui-react";
 import "./MainMenu.scss";
 import Home from "@Components/Home";
 import About from "@Components/About";
+import Error404 from "@Components/Error404";
 import Banner from "@images/banner-books.jpg";
 
 function MainMenu() {
@@ -21,7 +22,6 @@ function MainMenu() {
         <h2>Books store</h2>
         <Label size="massive" image={Banner} />
       </header>
-
       <Router>
         <Menu>
           <Menu.Item as={Link} to="/">
@@ -33,8 +33,9 @@ function MainMenu() {
         </Menu>
 
         <Switch>
-          <Route exact component={Home} path="/" />
-          <Route exact component={About} path="/about" />
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route component={Error404} />
         </Switch>
       </Router>
     </>
