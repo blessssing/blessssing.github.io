@@ -4,10 +4,9 @@ import { Container } from "semantic-ui-react";
 function Error404() {
   return (
     <Container textAlign="center">
-      <h1>404</h1>
-      <h2>Page not found!</h2>
+      <h1>ERROR 404</h1>
       <p>
-        <a href="/">Home Page</a>
+        <a href="/">Page not Found. Return to Main Page</a>
       </p>
     </Container>
   );
