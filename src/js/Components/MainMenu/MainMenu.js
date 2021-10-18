@@ -1,7 +1,7 @@
 import React from "react";
 
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import { Menu } from "semantic-ui-react";
+import { Menu, Container } from "semantic-ui-react";
 
 import "./MainMenu.scss";
 import Home from "@Components/Home";
@@ -9,7 +9,7 @@ import About from "@Components/About";
 import Error404 from "@Components/Error404";
 
 function MainMenu() {
-  const items = [
+  const navigation = [
     {
       key: "home",
       active: true,
@@ -22,9 +22,9 @@ function MainMenu() {
   ];
 
   return (
-    <>
+    <Container>
       <Router>
-        <Menu items={items} />
+        <Menu items={navigation} />
 
         <Switch>
           <Route exact path="/" component={Home} />
@@ -32,7 +32,7 @@ function MainMenu() {
           <Route component={Error404} />
         </Switch>
       </Router>
-    </>
+    </Container>
   );
 }
 
