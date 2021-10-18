@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 
-function Error404() {
+const Error404 = () => {
   return (
     <Container textAlign="center">
       <h1>ERROR 404</h1>
       <p>
-        <a href="/">Page not Found. Return to Main Page</a>
+        <Link to="/">Page not Found. Return to Main Page</Link>
       </p>
     </Container>
   );
-}
+};
 
 export default Error404;

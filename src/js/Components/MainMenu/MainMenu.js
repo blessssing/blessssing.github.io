@@ -1,14 +1,14 @@
 import React from "react";
-
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import { Menu, Container } from "semantic-ui-react";
+import { Menu } from "semantic-ui-react";
 
 import "./MainMenu.scss";
 import Home from "@Components/Home";
 import About from "@Components/About";
 import Error404 from "@Components/Error404";
+import Section from "@Components/Section";
 
-function MainMenu() {
+const MainMenu = () => {
   const navigation = [
     {
       key: "home",
@@ -22,7 +22,7 @@ function MainMenu() {
   ];
 
   return (
-    <Container>
+    <Section>
       <Router>
         <Menu items={navigation} />
 
@@ -32,8 +32,8 @@ function MainMenu() {
           <Route component={Error404} />
         </Switch>
       </Router>
-    </Container>
+    </Section>
   );
-}
+};
 
 export default MainMenu;
