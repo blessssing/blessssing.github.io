@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Switch, Link } from "react-router-dom";
 import { Menu } from "semantic-ui-react";
 
 import "./MainMenu.scss";
@@ -21,17 +21,21 @@ const MainMenu = () => {
     { key: "test", name: "test", to: "/test", as: Link },
   ];
 
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos").then((res) =>
+      console.log("res ", res)
+    );
+  }, []);
+
   return (
     <Section>
-      <Router>
-        <Menu items={navigation} />
+      <Menu items={navigation} />
 
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route component={Error404} />
-        </Switch>
-      </Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route component={Error404} />
+      </Switch>
     </Section>
   );
 };
