@@ -1,16 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledSection = styled.section`
+const StyledSectionOuter = styled.section`
   display: ${({ display }) => display || "block"};
-  height: ${({ height }) => height || "100px"};
+  max-width: ${({ maxWidth }) => maxWidth || "1900px"};
   margin: ${({ margin }) => margin || "0 auto"};
-  max-width: ${({ maxWidth }) => maxWidth || "1000px"};
-  min-width: ${({ minWidth }) => minWidth || "800px"};
+`;
+
+const StyledSectionInner = styled.section`
+  display: ${({ display }) => display || "block"};
+  max-width: ${({ maxWidth }) => maxWidth || "1200px"};
+  margin: ${({ margin }) => margin || "0 auto"};
+  padding: ${({ padding }) => padding || "2rem 0"};
 `;
 
 const Section = (props) => {
-  return <StyledSection {...props} />;
+  return (
+    <StyledSectionOuter>
+      <StyledSectionInner {...props} />
+    </StyledSectionOuter>
+  );
 };
 
 export default Section;

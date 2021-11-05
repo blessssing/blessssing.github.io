@@ -7,7 +7,7 @@ const StyledWrapperCentered = styled.div`
   display: block;
   margin: 0 auto;
   padding: 0 1rem;
-  max-width: 1180px;
+  max-width: 1200px;
 `;
 
 const WrapperApp = (props) => {

@@ -28,7 +28,7 @@ const MainMenu = () => {
   }, []);
 
   return (
-    <Section>
+    <Section padding="0">
       <Menu items={navigation} />
 
       <Switch>
