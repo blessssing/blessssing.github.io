@@ -3,40 +3,72 @@
     "id": "1",
     "bookId": "1",
     "title": "book name 1",
-    "description": "barbaris",
+    "description": "Inferno",
     "age": "16+",
-    "author": "Den Brown"
+    "author": "Dan Brown",
+    "img": "dan brown inferno.jpg"
   },
   {
     "id": "2",
     "bookId": "2",
     "title": "book name 2",
-    "description": "barbaris",
+    "description": "The Lost Symbol",
     "age": "16+",
-    "author": "Den Brown"
+    "author": "Dan Brown",
+    "img": "dan brown The Lost Symbol.jpg"
   },
   {
     "id": "3",
     "bookId": "3",
     "title": "book name 3",
-    "description": "barbaris",
+    "description": "Da vinci code",
     "age": "16+",
-    "author": "Den Brown"
+    "author": "Dan Brown",
+    "img": "dan brown da vinci code.jpg"
   },
   {
     "id": "4",
     "bookId": "4",
     "title": "book name 4",
-    "description": "barbaris",
+    "description": "Digital Fortress",
     "age": "16+",
-    "author": "Den Brown"
+    "author": "Dan Brown",
+    "img": "dan brown digital fortress.jpg"
   },
   {
     "id": "5",
     "bookId": "5",
     "title": "book name 5",
-    "description": "barbaris",
+    "description": "Deception Point",
     "age": "16+",
-    "author": "Den Brown"
+    "author": "Dan Brown",
+    "img": "dan brown Deception Point.jpg"
+  },
+  {
+    "id": "6",
+    "bookId": "6",
+    "title": "book name 6",
+    "description": "Angels and Demons",
+    "age": "16+",
+    "author": "Dan Brown",
+    "img": "dan brown angels and demons.jpg"
+  },
+  {
+    "id": "7",
+    "bookId": "7",
+    "title": "book name 7",
+    "description": "1984",
+    "age": "16+",
+    "author": "George Oruell",
+    "img": "george oruell 1984.jpg"
+  },
+  {
+    "id": "8",
+    "bookId": "8",
+    "title": "book name 8",
+    "description": "Brawe New World",
+    "age": "16+",
+    "author": "Oldos Hecksley",
+    "img": "oldos hecksley bnw.jpg"
   }
 ]
