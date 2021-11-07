@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Switch, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import { Menu } from "semantic-ui-react";
 
 import "./MainMenu.scss";
@@ -31,11 +31,11 @@ const MainMenu = () => {
     <Section padding="0">
       <Menu items={navigation} />
 
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route component={Error404} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
     </Section>
   );
 };
