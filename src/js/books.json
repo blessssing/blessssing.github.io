@@ -1,74 +1,89 @@
 [
   {
-    "id": "1",
-    "bookId": "1",
-    "title": "book name 1",
-    "description": "Inferno",
-    "age": "16+",
     "author": "Dan Brown",
-    "img": "dan brown inferno.jpg"
+    "books": [
+      {
+        "id": "1",
+        "article": "1",
+        "title": "Inferno",
+        "description": "Inferno",
+        "age": "16+",
+        "author": "Dan Brown",
+        "img": "dan brown inferno.jpg"
+      },
+      {
+        "id": "2",
+        "article": "2",
+        "title": "The Lost Symbol",
+        "description": "The Lost Symbol",
+        "age": "16+",
+        "author": "Dan Brown",
+        "img": "dan brown The Lost Symbol.jpg"
+      },
+      {
+        "id": "3",
+        "article": "3",
+        "title": "Da vinci code",
+        "description": "Da vinci code",
+        "age": "16+",
+        "author": "Dan Brown",
+        "img": "dan brown da vinci code.jpg"
+      },
+      {
+        "id": "4",
+        "article": "4",
+        "title": "Digital Fortress",
+        "description": "Digital Fortress",
+        "age": "16+",
+        "author": "Dan Brown",
+        "img": "dan brown digital fortress.jpg"
+      },
+      {
+        "id": "5",
+        "article": "5",
+        "title": "Deception Point",
+        "description": "Deception Point",
+        "age": "16+",
+        "author": "Dan Brown",
+        "img": "dan brown Deception Point.jpg"
+      },
+      {
+        "id": "6",
+        "article": "6",
+        "title": "Angels and Demons",
+        "description": "Angels and Demons",
+        "age": "16+",
+        "author": "Dan Brown",
+        "img": "dan brown angels and demons.jpg"
+      }
+    ]
   },
   {
-    "id": "2",
-    "bookId": "2",
-    "title": "book name 2",
-    "description": "The Lost Symbol",
-    "age": "16+",
-    "author": "Dan Brown",
-    "img": "dan brown The Lost Symbol.jpg"
-  },
-  {
-    "id": "3",
-    "bookId": "3",
-    "title": "book name 3",
-    "description": "Da vinci code",
-    "age": "16+",
-    "author": "Dan Brown",
-    "img": "dan brown da vinci code.jpg"
-  },
-  {
-    "id": "4",
-    "bookId": "4",
-    "title": "book name 4",
-    "description": "Digital Fortress",
-    "age": "16+",
-    "author": "Dan Brown",
-    "img": "dan brown digital fortress.jpg"
-  },
-  {
-    "id": "5",
-    "bookId": "5",
-    "title": "book name 5",
-    "description": "Deception Point",
-    "age": "16+",
-    "author": "Dan Brown",
-    "img": "dan brown Deception Point.jpg"
-  },
-  {
-    "id": "6",
-    "bookId": "6",
-    "title": "book name 6",
-    "description": "Angels and Demons",
-    "age": "16+",
-    "author": "Dan Brown",
-    "img": "dan brown angels and demons.jpg"
-  },
-  {
-    "id": "7",
-    "bookId": "7",
-    "title": "book name 7",
-    "description": "1984",
-    "age": "16+",
     "author": "George Oruell",
-    "img": "george oruell 1984.jpg"
+    "books": [
+      {
+        "id": "7",
+        "article": "7",
+        "title": "1984",
+        "description": "1984",
+        "age": "16+",
+        "author": "George Oruell",
+        "img": "george oruell 1984.jpg"
+      }
+    ]
   },
   {
-    "id": "8",
-    "bookId": "8",
-    "title": "book name 8",
-    "description": "Brawe New World",
-    "age": "16+",
     "author": "Oldos Hecksley",
-    "img": "oldos hecksley bnw.jpg"
+    "books": [
+      {
+        "id": "8",
+        "article": "8",
+        "title": "Brawe New World",
+        "description": "Brawe New World",
+        "age": "16+",
+        "author": "Oldos Hecksley",
+        "img": "oldos hecksley bnw.jpg"
+      }
+    ]
   }
 ]
