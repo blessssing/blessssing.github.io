@@ -109,6 +109,8 @@ module.exports = {
       "@images": path.resolve(__dirname, "src/assets/images"),
       "@icons": path.resolve(__dirname, "src/assets/icons"),
       "@styles": path.resolve(__dirname, "src/styles"),
+      "@reducers": path.resolve(__dirname, "src/js/redux/reducers"),
+      "@store": path.resolve(__dirname, "src/js/redux/store"),
     },
   },
   optimization: optimization(),
