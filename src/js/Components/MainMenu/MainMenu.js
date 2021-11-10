@@ -21,12 +21,6 @@ const MainMenu = () => {
     { key: "test", name: "test", to: "/test", as: Link },
   ];
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos").then((res) =>
-      console.log("res ", res)
-    );
-  }, []);
-
   return (
     <Section padding="0">
       <Menu items={navigation} />

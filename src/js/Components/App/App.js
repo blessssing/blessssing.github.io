@@ -4,7 +4,7 @@ import HeaderSection from "@Components/HeaderSection";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { setBooks } from "@reducers/booksSlice";
-import books from "../../books";
+import { fetchBooks } from "@reducers/booksSlice";
 
 const StyledWrapperCentered = styled.div`
   display: block;
@@ -19,13 +19,12 @@ const WrapperApp = (props) => {
 
 const App = () => {
   const dispatch = useDispatch();
-  const checkBooks = useSelector((state) => state.books);
-  console.log("checkBooks ", checkBooks);
+  const books = useSelector((state) => state.books);
+  console.log("books ", books);
 
   useEffect(() => {
-    // TODO: write books into store
-    dispatch(setBooks(books));
-  }, []);
+    dispatch(fetchBooks());
+  }, [dispatch]);
 
   return (
     <WrapperApp>
