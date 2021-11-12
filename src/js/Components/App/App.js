@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import MainMenu from "@Components/MainMenu";
 import HeaderSection from "@Components/HeaderSection";
+import BooksList from "@Components/BooksList";
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
-import { setBooks } from "@reducers/booksSlice";
+import { useDispatch } from "react-redux";
 import { fetchBooks } from "@reducers/booksSlice";
 
 const StyledWrapperCentered = styled.div`
@@ -19,8 +19,6 @@ const WrapperApp = (props) => {
 
 const App = () => {
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.books);
-  console.log("books ", books);
 
   useEffect(() => {
     dispatch(fetchBooks());
@@ -30,6 +28,7 @@ const App = () => {
     <WrapperApp>
       <HeaderSection />
       <MainMenu />
+      <BooksList />
     </WrapperApp>
   );
 };

@@ -99,7 +99,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
-    extensions: [".js", ".json", ".png"],
+    extensions: [".js", ".jsx", ".json", ".png"],
     alias: {
       "@": path.resolve(__dirname, "src"),
       "@Components": path.resolve(__dirname, "src/js/Components"),
@@ -117,6 +117,7 @@ module.exports = {
   devServer: {
     port: 4200,
     hot: isDev,
+    historyApiFallback: true,
   },
   devtool: isDev ? "source-map" : "",
   plugins: plugins(),
@@ -135,7 +136,7 @@ module.exports = {
         use: cssLoaders("sass-loader"),
       },
       {
-        test: /\.(png|jpg|svg|gif)$/,
+        test: /\.(png|jpg|jpeg|svg|gif)$/i,
         use: ["file-loader"],
       },
       {
