@@ -11,7 +11,7 @@ const BooksList = () => {
     <>
       <h2>BooksList</h2>
       {books.map((item) => (
-        <div style={{ display: "flex" }} key={item.author}>
+        <div style={{ display: "flex", flexWrap: "wrap" }} key={item.author}>
           {item.books.map((book) => (
             <BooksListItem key={book.title} {...book} />
           ))}

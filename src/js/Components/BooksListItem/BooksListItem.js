@@ -1,5 +1,4 @@
 import React from "react";
-import bannerImg from "@images/dan brown digital fortress.jpg";
 
 const BooksListItem = ({ article, title, description, age, author, img }) => {
   return (
@@ -10,6 +9,13 @@ const BooksListItem = ({ article, title, description, age, author, img }) => {
       <div>
         <span>{title}</span>
       </div>
+      <div style={{ width: "200px", height: "200px" }}>
+        <img
+          style={{ display: "block", width: "200px", height: "200px" }}
+          src={img}
+          alt={img}
+        />
+      </div>
       <div>
         <span>{description}</span>
       </div>
@@ -18,13 +24,6 @@ const BooksListItem = ({ article, title, description, age, author, img }) => {
       </div>
       <div>
         <span>{author}</span>
-      </div>
-      <div style={{ width: "100px", height: "100px" }}>
-        <img
-          style={{ display: "block", width: "100px", height: "100px" }}
-          src={img}
-          alt={img}
-        />
       </div>
     </div>
   );
