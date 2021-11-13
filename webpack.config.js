@@ -146,12 +146,12 @@ module.exports = {
           // useRelativePath: true,
           // name: "[path][name].[ext]", // work
           // outputPath: "./",
-          name: "[name].[ext]",
+          // name: "[name].[ext]",
           // publicPath: "./src/assets/images",
           // publicPath: path.resolve(__dirname, "src/assets/images"), // work
           // publicPath: path.resolve(__dirname, "images"),
-          publicPath: "images/",
-          outputPath: "images/",
+          // publicPath: "images/",
+          // outputPath: "images/",
           // publicPath: path.resolve(__dirname, "images"),
           // publicPath: path.resolve(__dirname, "/images"), // work poor as a ./
           // outputPath: path.resolve(__dirname, "src/assets/images"),

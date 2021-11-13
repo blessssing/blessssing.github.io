@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import books from "@/js/books";
+import books from "@/js/books.js";
+console.log("books ", books);
 
 export const fetchBooks = createAsyncThunk("books/fetchBooks", async () => {
   const response = await new Promise((resolve) => resolve(books));
