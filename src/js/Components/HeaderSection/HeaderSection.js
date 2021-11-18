@@ -1,6 +1,5 @@
 import React from "react";
-import bannerImg from "@images/banner-books.jpg";
-// import bannerImg from "./banner-books.jpg";
+// import bannerImg from "@images/banner-books.jpg";
 import Banner from "@Components/Banner";
 
 const HeaderSection = () => {
@@ -11,7 +10,7 @@ const HeaderSection = () => {
         margin="0 auto"
         width="100%"
         height="100px"
-        src={bannerImg}
+        src={"images/banner-books.jpg"}
       />
     </header>
   );

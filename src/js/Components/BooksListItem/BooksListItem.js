@@ -2,16 +2,16 @@ import React from "react";
 
 const BooksListItem = ({ article, title, description, age, author, img }) => {
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", width: "200px", flexDirection: "column" }}>
       <div>
         <span>{article}</span>
       </div>
       <div>
         <span>{title}</span>
       </div>
-      <div style={{ width: "200px", height: "200px" }}>
+      <div style={{ width: "100px", height: "100px" }}>
         <img
-          style={{ display: "block", width: "200px", height: "200px" }}
+          style={{ display: "block", width: "100px", height: "100px" }}
           src={img}
           alt={img}
         />

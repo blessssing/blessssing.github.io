@@ -98,6 +98,9 @@ module.exports = {
     filename: filename("js"),
     path: path.resolve(__dirname, "dist"),
   },
+  performance: {
+    hints: false,
+  },
   resolve: {
     extensions: [".js", ".jsx", ".json", ".png"],
     alias: {
@@ -106,7 +109,7 @@ module.exports = {
       "@Containers": path.resolve(__dirname, "src/js/Containers"),
       "@helperFunctions": path.resolve(__dirname, "src/js/helperFunctions"),
       "@hooks": path.resolve(__dirname, "src/js/hooks"),
-      "@images": path.resolve(__dirname, "src/assets/images"),
+      "@images": path.resolve(__dirname, "public/images"),
       "@icons": path.resolve(__dirname, "src/assets/icons"),
       "@styles": path.resolve(__dirname, "src/styles"),
       "@reducers": path.resolve(__dirname, "src/js/redux/reducers"),
@@ -115,6 +118,9 @@ module.exports = {
   },
   optimization: optimization(),
   devServer: {
+    // contentBase Я хотел в react, через цикл вывести картинки в теге <img/>
+    // Без этой настройки изображения не будут видны при разработке
+    contentBase: path.join(__dirname, "public"),
     port: 4200,
     hot: isDev,
     historyApiFallback: true,
@@ -135,29 +141,17 @@ module.exports = {
         test: /\.s[ac]ss$/,
         use: cssLoaders("sass-loader"),
       },
-      // { // Work
-      //   test: /\.(png|jpg|jpeg|svg|gif)$/i,
-      //   use: ["file-loader"],
-      // },
       {
         test: /\.(png|jpg|jpeg|svg|gif)$/i,
-        loader: "file-loader",
-        options: {
-          // useRelativePath: true,
-          // name: "[path][name].[ext]", // work
-          // outputPath: "./",
-          // name: "[name].[ext]",
-          // publicPath: "./src/assets/images",
-          // publicPath: path.resolve(__dirname, "src/assets/images"), // work
-          // publicPath: path.resolve(__dirname, "images"),
-          // publicPath: "images/",
-          // outputPath: "images/",
-          // publicPath: path.resolve(__dirname, "images"),
-          // publicPath: path.resolve(__dirname, "/images"), // work poor as a ./
-          // outputPath: path.resolve(__dirname, "src/assets/images"),
-          // publicPath: path.resolve(__dirname, "src/assets/images"), // work as ./
-          // outputPath: path.resolve(__dirname, "src/assets/images/"),
-        },
+        use: [
+          {
+            // loader: "file-loader", // work or
+            loader: "url-loader", // work or
+            options: {
+              name: "./images/[name].[ext]",
+            },
+          },
+        ],
       },
       {
         test: /\.(ttf|woff|woff2|eot)$/,
