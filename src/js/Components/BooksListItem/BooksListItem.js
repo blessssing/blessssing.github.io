@@ -5,9 +5,16 @@ const BooksListItem = ({ article, title, description, age, author, img }) => {
     <div
       style={{
         display: "flex",
+        padding: "10px 10px 15px",
         flexBasis: "270px",
+        flexShrink: 0,
         flexDirection: "column",
         textAlign: "center",
+        border: "1px solid gold",
+        borderRadius: "4px",
+        boxShadow: "2px 5px 7px #6E4237",
+        rowGap: "5px",
+        fontSize: "1.1rem",
       }}
     >
       <div>

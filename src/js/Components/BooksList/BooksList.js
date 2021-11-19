@@ -21,7 +21,14 @@ const BooksList = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        paddingTop: "15px",
+        flexDirection: "column",
+        rowGap: "30px",
+      }}
+    >
       {(books.length &&
         books.map((item) => (
           <div
@@ -29,6 +36,8 @@ const BooksList = () => {
               display: "flex",
               flexWrap: "wrap",
               justifyContent: "center",
+              columnGap: "15px",
+              rowGap: "30px",
             }}
             key={item.author}
           >
@@ -42,7 +51,7 @@ const BooksList = () => {
           <Loader />
         </div>
       )}
-    </>
+    </div>
   );
 };
 
