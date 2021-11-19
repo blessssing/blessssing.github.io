@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import booksSlice from "../../redux/reducers/booksSlice";
 import { useDispatch } from "react-redux";
 import { fetchBooks } from "@reducers/booksSlice";
+import Loader from "@Components/Loader";
 
 const BooksList = () => {
   const books = useSelector((state) => state.books.books);
@@ -23,12 +24,24 @@ const BooksList = () => {
     <>
       {(books.length &&
         books.map((item) => (
-          <div style={{ display: "flex", flexWrap: "wrap" }} key={item.author}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+            key={item.author}
+          >
             {item.books.map((book) => (
               <BooksListItem key={book.title} {...book} />
             ))}
           </div>
-        ))) || <div>Loading the BooksList ...</div>}
+        ))) || (
+        <div>
+          Loading the BooksList ...
+          <Loader />
+        </div>
+      )}
     </>
   );
 };

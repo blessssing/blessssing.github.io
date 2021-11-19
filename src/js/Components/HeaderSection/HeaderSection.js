@@ -1,5 +1,4 @@
 import React from "react";
-// import bannerImg from "@images/banner-books.jpg";
 import Banner from "@Components/Banner";
 
 const HeaderSection = () => {
