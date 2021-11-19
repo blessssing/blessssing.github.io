@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledSectionOuter = styled.section`
-  display: ${({ display }) => display || "block"};
+  display: ${({ display }) => display || "flex"};
+  justify-content: center;
   max-width: ${({ maxWidth }) => maxWidth || "1900px"};
   margin: ${({ margin }) => margin || "0 auto"};
 `;
