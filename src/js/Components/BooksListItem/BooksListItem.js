@@ -15,6 +15,7 @@ const BooksListItem = ({ article, title, description, age, author, img }) => {
         boxShadow: "2px 5px 7px #6E4237",
         rowGap: "5px",
         fontSize: "1.1rem",
+        backgroundColor: "white",
       }}
     >
       <div>

@@ -27,7 +27,7 @@ const BooksList = () => {
         flexDirection: "column",
         flexGrow: "1",
         rowGap: "30px",
-        paddingTop: "15px",
+        padding: "15px 0 25px",
       }}
     >
       {(books.length &&
