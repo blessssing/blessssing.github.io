@@ -24,9 +24,10 @@ const BooksList = () => {
     <div
       style={{
         display: "flex",
-        paddingTop: "15px",
         flexDirection: "column",
+        flexGrow: "1",
         rowGap: "30px",
+        paddingTop: "15px",
       }}
     >
       {(books.length &&
@@ -46,7 +47,12 @@ const BooksList = () => {
             ))}
           </div>
         ))) || (
-        <div>
+        <div
+          style={{
+            fontSize: "1.2rem",
+            textAlign: "center",
+          }}
+        >
           Loading the BooksList ...
           <Loader />
         </div>
