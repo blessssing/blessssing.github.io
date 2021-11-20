@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Menu.scss";
 
 const Menu = ({ navigation }) => {
   return (
@@ -27,6 +28,7 @@ const Menu = ({ navigation }) => {
                 fontSize: "1.2rem",
                 padding: "0.3rem",
               }}
+              className={"nav-link"}
             >
               {name}
             </Link>

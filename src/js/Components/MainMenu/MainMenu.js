@@ -11,12 +11,7 @@ import Section from "@Components/Section";
 
 const MainMenu = () => {
   const navigation = [
-    {
-      key: "home",
-      active: true,
-      name: "Home",
-      to: "/",
-    },
+    { key: "home", name: "Home", to: "/" },
     { key: "about", name: "About", to: "/about" },
     { key: "test", name: "test", to: "/test" },
   ];
