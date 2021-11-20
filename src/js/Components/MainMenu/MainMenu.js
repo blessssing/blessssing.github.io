@@ -16,15 +16,14 @@ const MainMenu = () => {
       active: true,
       name: "Home",
       to: "/",
-      as: Link,
     },
-    { key: "about", name: "About", to: "/about", as: Link },
-    { key: "test", name: "test", to: "/test", as: Link },
+    { key: "about", name: "About", to: "/about" },
+    { key: "test", name: "test", to: "/test" },
   ];
 
   return (
-    <Section padding="0">
-      <Menu items={navigation} />
+    <Section>
+      <Menu navigation={navigation} />
 
       <Routes>
         <Route path="/" element={<Home />} />

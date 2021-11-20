@@ -9,15 +9,19 @@ import store from "@store";
 import styled, { createGlobalStyle } from "styled-components";
 
 const Global = createGlobalStyle`
-* {
-  margin: 0;
-  padding: 0;
+html {
   box-sizing: border-box;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  // background-color: #F8F8F8;
-  // background-color: orange;
-  // background-color: #FFFFFF;
   background-color: #F7F8FA;
 }
 `;

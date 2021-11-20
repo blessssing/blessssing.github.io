@@ -1,13 +1,26 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins/mixins";
 $border: 1px solid #ccc;
 
-.card {
-  padding: 1rem;
-  border-radius: 5px;
-  margin-top: 1rem;
-  border: $border;
+// .card {
+//   padding: 1rem;
+//   border-radius: 5px;
+//   margin-top: 1rem;
+//   border: $border;
 
-  h2 {
-    text-align: center;
-    color: tomato;
+//   h2 {
+//     text-align: center;
+//     color: tomato;
+//   }
+// }
+
+// h1 {
+//   text-align: center;
+//   color: $color-bg-test;
+// }
+
+.pointer {
+  &:hover {
+    cursor: pointer;
   }
 }
