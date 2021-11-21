@@ -32,6 +32,8 @@ const theme = {
     secondary: "#4899AE",
     white: "white",
     bgBody: "#F7F8FA",
+    goldenrod: "goldenrod",
+    gold: "gold",
   },
   media: {
     phone: "(max-width: 500px)",

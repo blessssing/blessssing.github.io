@@ -18,18 +18,9 @@ const Menu = ({ navigation }) => {
           padding: "0.8rem",
         }}
       >
-        {navigation.map(({ key, active, name, to }) => (
+        {navigation.map(({ key, name, to }) => (
           <div key={key}>
-            <Link
-              active={active}
-              to={to}
-              style={{
-                color: "white",
-                fontSize: "1.2rem",
-                padding: "0.3rem",
-              }}
-              className={"nav-link"}
-            >
+            <Link to={to} className={"nav-link active"}>
               {name}
             </Link>
           </div>
