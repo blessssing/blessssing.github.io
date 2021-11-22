@@ -8,7 +8,9 @@ import Loader from "@Components/Loader";
 
 const BooksList = () => {
   const books = useSelector((state) => state.books.books);
+  const isLoaded = useSelector((state) => state.books.isLoaded);
   console.log("books ", books);
+  console.log("isLoaded ", isLoaded);
 
   const dispatch = useDispatch();
 

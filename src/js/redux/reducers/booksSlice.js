@@ -14,6 +14,7 @@ const booksSlice = createSlice({
   initialState: {
     books: [],
     status: null,
+    isLoaded: false,
     error: null,
   },
   reducers: {
@@ -29,6 +30,7 @@ const booksSlice = createSlice({
     },
     [fetchBooks.fulfilled]: (state, action) => {
       state.status = "resolved";
+      state.isLoaded = true;
       state.books = action.payload;
     },
     [fetchBooks.rejected]: (state, action) => {},
