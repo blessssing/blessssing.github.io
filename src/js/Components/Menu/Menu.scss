@@ -1,15 +1,18 @@
 @import "@styles/variables.scss";
 @import "@styles/mixins/mixins";
 
-// === animate underline
 .nav-link {
   position: relative;
-  color: $color-white;
   font-size: 1.2rem;
   padding: 0.3rem;
+  box-shadow: 0 2px 2px #cecece;
+  @include borderRadius(2px);
+  @include transition(0.5s);
 
+  // === animate underline
   &:hover {
-    color: $color-white;
+    background-color: #f4f4f4;
+    @include transition(0.3s);
   }
 
   &:hover::before {
@@ -25,7 +28,7 @@
     content: "";
     width: 100%;
     height: 3px;
-    background-color: $color-white;
+    background-color: #bac65f;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -37,9 +40,5 @@
     transform-origin: left;
     @include transition(0.5s);
   }
-}
-// === / animate underline
-.active {
-  background-color: goldenrod;
-  @include borderRadius(5px);
+  // === / animate underline
 }

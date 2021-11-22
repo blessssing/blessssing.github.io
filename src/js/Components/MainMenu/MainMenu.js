@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-// import { Menu } from "semantic-ui-react";
 import Menu from "@Components/Menu";
 
 import "./MainMenu.scss";
