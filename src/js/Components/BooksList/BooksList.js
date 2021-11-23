@@ -32,8 +32,8 @@ const BooksList = () => {
     <div
       style={{
         display: "flex",
-        flexDirection: "row",
-        flexWrap: "wrap",
+        flexFlow: "row wrap",
+        justifyContent: "center",
         flexBasis: "270px",
         flexGrow: "1",
         rowGap: "30px",
@@ -41,34 +41,31 @@ const BooksList = () => {
         padding: "15px 0 25px",
       }}
     >
-      {(books.length &&
-        books.map((item) => (
+      {(allBooks.length &&
+        allBooks.map((book) => (
           <div
             style={{
               display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
+              flexFlow: "row wrap",
               justifyContent: "center",
               flexBasis: "270px",
               columnGap: "15px",
               rowGap: "30px",
             }}
-            key={item.author}
+            key={book.title}
           >
-            {item.books.map((book) => (
-              <Spring
-                from={{ opacity: 0 }}
-                to={{ opacity: 1 }}
-                config={{ duration: 2000 }}
-                key={book.title}
-              >
-                {(styles) => (
-                  <animated.div style={styles}>
-                    <BooksListItem key={book.title} {...book} />
-                  </animated.div>
-                )}
-              </Spring>
-            ))}
+            <Spring
+              from={{ opacity: 0 }}
+              to={{ opacity: 1 }}
+              config={{ duration: 2000 }}
+              key={book.title}
+            >
+              {(styles) => (
+                <animated.div style={styles}>
+                  <BooksListItem key={book.title} {...book} />
+                </animated.div>
+              )}
+            </Spring>
           </div>
         ))) || (
         <div
