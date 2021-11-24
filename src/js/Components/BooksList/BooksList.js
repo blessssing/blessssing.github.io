@@ -28,31 +28,10 @@ const BooksList = () => {
   }, [dispatch]);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexFlow: "row wrap",
-        justifyContent: "center",
-        flexBasis: "270px",
-        flexGrow: "1",
-        rowGap: "30px",
-        columnGap: "30px",
-        padding: "15px 0 25px",
-      }}
-    >
+    <main className={"books-list books-list__container"}>
       {(allBooks.length &&
         allBooks.map((book) => (
-          <div
-            style={{
-              display: "flex",
-              flexFlow: "row wrap",
-              justifyContent: "center",
-              flexBasis: "270px",
-              columnGap: "15px",
-              rowGap: "30px",
-            }}
-            key={book.title}
-          >
+          <div className={"wrapper-book"} key={book.title}>
             <Spring
               from={{ opacity: 0 }}
               to={{ opacity: 1 }}
@@ -67,18 +46,12 @@ const BooksList = () => {
             </Spring>
           </div>
         ))) || (
-        <div
-          style={{
-            fontSize: "1.2rem",
-            textAlign: "center",
-            margin: "0 auto",
-          }}
-        >
+        <div className={"wrapper-loader"}>
           Loading the BooksList ...
           <Loader />
         </div>
       )}
-    </div>
+    </main>
   );
 };
 

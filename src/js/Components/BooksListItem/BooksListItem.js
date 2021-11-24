@@ -3,7 +3,7 @@ import "./BooksListItem.scss";
 
 const BooksListItem = ({ article, title, description, age, author, img }) => {
   return (
-    <div className={"book-list-item book-list-item__container"}>
+    <div className={"books-list-item books-list-item__container"}>
       <div>
         <span>
           (Art. {article})&nbsp;{title}

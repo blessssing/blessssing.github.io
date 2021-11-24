@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import Menu from "@Components/Menu";
-
+import React from "react";
 import "./MainMenu.scss";
+import { Routes, Route } from "react-router-dom";
+import Menu from "@Components/Menu";
 import Home from "@Components/Home";
 import About from "@Components/About";
 import Error404 from "@Components/Error404";

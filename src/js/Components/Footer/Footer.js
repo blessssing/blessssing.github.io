@@ -1,15 +1,9 @@
 import React from "react";
+import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <div
-      style={{
-        padding: "20px 15px 35px",
-        background: "#58616E",
-        color: "white",
-        textAlign: "center",
-      }}
-    >
+    <footer className={"footer"}>
       <p>
         <span>Contact us: betterricherhigher@gmail.com</span>
       </p>
@@ -20,7 +14,7 @@ const Footer = () => {
       >
         <span>All rights reserved 2021.</span>
       </p>
-    </div>
+    </footer>
   );
 };
 

@@ -1,8 +1,8 @@
 import React from "react";
+import styled from "styled-components";
 import MainMenu from "@Components/MainMenu";
 import HeaderSection from "@Components/HeaderSection";
 import BooksList from "@Components/BooksList";
-import styled from "styled-components";
 import Footer from "@Components/Footer";
 
 const StyledWrapperCentered = styled.div`
