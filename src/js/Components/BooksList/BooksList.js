@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./BooksList.scss";
-import BooksListItem from "../BooksListItem";
-import { useSelector } from "react-redux";
-import booksSlice from "../../redux/reducers/booksSlice";
-import { useDispatch } from "react-redux";
-import { fetchBooks } from "@reducers/booksSlice";
-import Loader from "@Components/Loader";
+import { useDispatch, useSelector } from "react-redux";
 import { Spring, animated } from "react-spring";
+import { fetchBooks } from "@reducers/booksSlice";
+import booksSlice from "@reducers/booksSlice";
+import BooksListItem from "@Components/BooksListItem";
+import Loader from "@Components/Loader";
 
 const BooksList = () => {
   const dispatch = useDispatch();
@@ -57,7 +56,7 @@ const BooksList = () => {
             <Spring
               from={{ opacity: 0 }}
               to={{ opacity: 1 }}
-              config={{ duration: 2000 }}
+              config={{ duration: 1000 }}
               key={book.title}
             >
               {(styles) => (

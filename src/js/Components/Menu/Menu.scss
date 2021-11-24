@@ -1,23 +1,25 @@
 @import "@styles/variables.scss";
 @import "@styles/mixins/mixins";
 
-.menu-container {
-  background-color: white;
-  border: 1px solid #c5c5c6;
-  box-shadow: 0 2px 4px #bac65f;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-}
+.menu {
+  &__container {
+    background-color: white;
+    border: 1px solid #c5c5c6;
+    box-shadow: 0 2px 4px #bac65f;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
 
-.menu-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.2rem;
-  padding: 0.8rem;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.2rem;
+    padding: 0.8rem;
+  }
 }
 
 .nav-link {
