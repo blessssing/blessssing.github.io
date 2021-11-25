@@ -1,8 +1,9 @@
 import React from "react";
 import { render } from "react-dom";
 import App from "@Components/App";
-import "./styles/scss.scss";
 import "semantic-ui-css/semantic.min.css";
+import "./styles/scss.scss";
+import "@styles/variables.scss";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "@store";
@@ -37,8 +38,18 @@ const theme = {
   },
   media: {
     phone: "(max-width: 500px)",
-    tablet: "(max-width: 768px) and (min-width: 500px)",
+    tablet: "(max-width: 991px)",
   },
+
+  // $screen-sm: 576px;
+  // $screen-md: 768px;
+  // $screen-lg: 992px;
+  // $screen-xl: 1200px;
+  // === === ===
+  // $screen-xs-max: 575px;
+  // $screen-sm-max: 767px;
+  // $screen-md-max: 991px;
+  // $screen-lg-max: 1199px;
 };
 
 render(

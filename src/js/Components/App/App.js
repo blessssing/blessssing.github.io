@@ -11,7 +11,11 @@ const StyledWrapperCentered = styled.div`
   margin: 0 auto;
   padding: 0 1rem;
   max-width: 1200px;
-  height: 100vh;
+  min-height: 100vh;
+
+  @media ${(props) => props.theme.media.tablet} {
+    padding: 0;
+  }
 `;
 
 const WrapperApp = (props) => {

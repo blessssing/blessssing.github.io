@@ -12,13 +12,6 @@ const BooksList = () => {
   const books = useSelector((state) => state.books.books);
   console.log("books ", books);
 
-  // modify books depth 1 lvl
-  let allBooks = [...books].reduce(
-    (accumulator, item) => [...accumulator, ...item.books],
-    []
-  );
-  console.log("allBooks ", allBooks);
-
   useEffect(() => {
     setTimeout(() => {
       console.log("timeout 0.5 sec");
@@ -26,6 +19,13 @@ const BooksList = () => {
       dispatch(fetchBooks());
     }, 500);
   }, [dispatch]);
+
+  // modify books depth 1 lvl
+  const allBooks = [...books].reduce(
+    (accumulator, item) => [...accumulator, ...item.books],
+    []
+  );
+  console.log("allBooks ", allBooks);
 
   return (
     <main className={"books-list books-list__container"}>
