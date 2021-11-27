@@ -9,7 +9,7 @@ import Loader from "@Components/Loader";
 
 const BooksList = () => {
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.books.books);
+  const { books, status, error } = useSelector((state) => state.books);
   console.log("books ", books);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const BooksList = () => {
 
   return (
     <main className={"books-list books-list__container"}>
-      {(allBooks.length &&
+      {(status === "resolved" &&
         allBooks.map((book) => (
           <div className={"wrapper-book"} key={book.title}>
             <Spring
@@ -45,12 +45,13 @@ const BooksList = () => {
               )}
             </Spring>
           </div>
-        ))) || (
-        <div className={"wrapper-loader"}>
-          Loading the BooksList ...
-          <Loader />
-        </div>
-      )}
+        ))) ||
+        (error && <h2>Error, can not resolved data: {error}</h2>) || (
+          <div className={"wrapper-loader"}>
+            Loading the BooksList ...
+            <Loader />
+          </div>
+        )}
     </main>
   );
 };

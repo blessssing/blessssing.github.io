@@ -1,13 +1,19 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import books from "@/js/books";
-console.log("books ", books);
 
-export const fetchBooks = createAsyncThunk("books/fetchBooks", async () => {
-  const response = await new Promise((resolve) => resolve(books));
+export const fetchBooks = createAsyncThunk(
+  "books/fetchBooks",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await new Promise((resolve) => resolve(books));
 
-  console.log("response ", response);
-  return response;
-});
+      console.log("response ", response);
+      return response;
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
+  }
+);
 
 const booksSlice = createSlice({
   name: "books",
@@ -33,7 +39,10 @@ const booksSlice = createSlice({
       state.isLoaded = true;
       state.books = action.payload;
     },
-    [fetchBooks.rejected]: (state, action) => {},
+    [fetchBooks.rejected]: (state, action) => {
+      state.status = "rejected";
+      state.error = action.payload;
+    },
   },
 });
 
