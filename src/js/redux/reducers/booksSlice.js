@@ -6,8 +6,6 @@ export const fetchBooks = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await new Promise((resolve) => resolve(books));
-
-      console.log("response ", response);
       return response;
     } catch (err) {
       return rejectWithValue(err.message);
@@ -19,6 +17,7 @@ const booksSlice = createSlice({
   name: "books",
   initialState: {
     books: [],
+    allBooks: [],
     status: null,
     isLoaded: false,
     error: null,
@@ -27,6 +26,12 @@ const booksSlice = createSlice({
     addBookToCart() {},
     setBooks(state, action) {
       state.books = action.payload;
+    },
+    addAllBooks(state, action) {
+      state.allBooks = [...books].reduce(
+        (accumulator, item) => [...accumulator, ...item.books],
+        []
+      );
     },
   },
   extraReducers: {
@@ -46,6 +51,6 @@ const booksSlice = createSlice({
   },
 });
 
-export const { addBookToCart, setBooks } = booksSlice.actions;
+export const { addBookToCart, setBooks, addAllBooks } = booksSlice.actions;
 
 export default booksSlice.reducer;

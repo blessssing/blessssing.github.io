@@ -2,30 +2,28 @@ import React, { useEffect } from "react";
 import "./BooksList.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { Spring, animated } from "react-spring";
-import { fetchBooks } from "@reducers/booksSlice";
+import { fetchBooks, addAllBooks } from "@reducers/booksSlice";
 import booksSlice from "@reducers/booksSlice";
 import BooksListItem from "@Components/BooksListItem";
 import Loader from "@Components/Loader";
 
 const BooksList = () => {
   const dispatch = useDispatch();
-  const { books, status, error } = useSelector((state) => state.books);
+  const { books, allBooks, status, error } = useSelector(
+    (state) => state.books
+  );
   console.log("books ", books);
+  console.log("allBooks ", allBooks);
 
   useEffect(() => {
     setTimeout(() => {
       console.log("timeout 0.5 sec");
 
       dispatch(fetchBooks());
+      // modify books depth 1 lvl
+      dispatch(addAllBooks());
     }, 500);
   }, [dispatch]);
-
-  // modify books depth 1 lvl
-  const allBooks = [...books].reduce(
-    (accumulator, item) => [...accumulator, ...item.books],
-    []
-  );
-  console.log("allBooks ", allBooks);
 
   return (
     <main className={"books-list books-list__container"}>
