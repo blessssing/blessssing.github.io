@@ -1,6 +1,6 @@
 import React from "react";
 import "./BooksListItem.scss";
-import { Icon } from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
 
 const BooksListItem = ({ article, title, description, age, author, img }) => {
   return (
@@ -22,17 +22,7 @@ const BooksListItem = ({ article, title, description, age, author, img }) => {
       <div>
         <span>{description}</span>
       </div>
-      <Icon
-        name="add to cart"
-        size="big"
-        flipped="horizontally"
-        color="olive"
-        link
-        style={{
-          display: "flex",
-          alignSelf: "flex-end",
-        }}
-      />
+      <Button color="green" content="Buy now" />
     </div>
   );
 };
