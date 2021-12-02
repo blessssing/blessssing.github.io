@@ -23,7 +23,6 @@ const booksSlice = createSlice({
     error: null,
   },
   reducers: {
-    addBookToCart() {},
     setBooks(state, action) {
       state.books = action.payload;
     },
@@ -51,6 +50,6 @@ const booksSlice = createSlice({
   },
 });
 
-export const { addBookToCart, setBooks, addAllBooks } = booksSlice.actions;
+export const { setBooks, addAllBooks } = booksSlice.actions;
 
 export default booksSlice.reducer;

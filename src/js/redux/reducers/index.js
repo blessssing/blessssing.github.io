@@ -1,3 +1,4 @@
 import booksSlice from "./booksSlice";
+import cartSlice from "./cartSlice";
 
-export { booksSlice };
+export { booksSlice, cartSlice };

@@ -10,6 +10,7 @@ const books = [
         age: "16+",
         author: "Dan Brown",
         img: "images/dan brown inferno.jpg",
+        price: 15,
       },
       {
         id: "2",
@@ -19,6 +20,7 @@ const books = [
         age: "16+",
         author: "Dan Brown",
         img: "images/dan brown The Lost Symbol.jpg",
+        price: 25,
       },
       {
         id: "3",
@@ -28,6 +30,7 @@ const books = [
         age: "16+",
         author: "Dan Brown",
         img: "images/dan brown da vinci code.jpg",
+        price: 20,
       },
       {
         id: "4",
@@ -37,6 +40,7 @@ const books = [
         age: "16+",
         author: "Dan Brown",
         img: "images/dan brown digital fortress.jpg",
+        price: 35,
       },
       {
         id: "5",
@@ -46,6 +50,7 @@ const books = [
         age: "16+",
         author: "Dan Brown",
         img: "images/dan brown Deception Point.jpg",
+        price: 27,
       },
       {
         id: "6",
@@ -55,6 +60,7 @@ const books = [
         age: "16+",
         author: "Dan Brown",
         img: "images/dan brown angels and demons.jpg",
+        price: 31,
       },
     ],
   },
@@ -69,6 +75,7 @@ const books = [
         age: "16+",
         author: "George Oruell",
         img: "images/george oruell 1984.jpg",
+        price: 42,
       },
     ],
   },
@@ -83,6 +90,7 @@ const books = [
         age: "16+",
         author: "Oldos Hecksley",
         img: "images/oldos hecksley bnw.jpg",
+        price: 45,
       },
     ],
   },
@@ -97,6 +105,7 @@ const books = [
         age: "16+",
         author: "Michael Bulgakov",
         img: "images/bulgakovmm.jpg",
+        price: 38,
       },
     ],
   },

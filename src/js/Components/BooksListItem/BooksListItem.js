@@ -1,8 +1,14 @@
 import React from "react";
 import "./BooksListItem.scss";
-import { Button } from "semantic-ui-react";
+import { useDispatch } from "react-redux";
 
-const BooksListItem = ({ article, title, description, age, author, img }) => {
+import { Button } from "semantic-ui-react";
+import { addBookToCart } from "@reducers/cartSlice";
+
+const BooksListItem = (props) => {
+  const dispatch = useDispatch();
+  const { article, title, description, age, author, img, price } = props;
+
   return (
     <div className={"books-list-item books-list-item__container"}>
       <div>
@@ -22,7 +28,14 @@ const BooksListItem = ({ article, title, description, age, author, img }) => {
       <div>
         <span>{description}</span>
       </div>
-      <Button color="green" content="Buy now" />
+      <div>
+        <Button
+          onClick={() => dispatch(addBookToCart({ ...props }))}
+          color="green"
+          content="Buy now"
+        />
+        <span>$&nbsp;{price}</span>
+      </div>
     </div>
   );
 };
