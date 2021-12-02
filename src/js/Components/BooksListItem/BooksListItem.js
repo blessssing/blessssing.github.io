@@ -32,7 +32,7 @@ const BooksListItem = (props) => {
         <Button
           onClick={() => dispatch(addBookToCart({ ...props }))}
           color="green"
-          content="Buy now"
+          content="Add to cart"
         />
         <span>$&nbsp;{price}</span>
       </div>
