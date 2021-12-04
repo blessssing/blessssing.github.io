@@ -14,7 +14,6 @@ const MainMenu = () => {
   const navigation = [
     { key: "home", name: "Home", to: "/" },
     { key: "about", name: "About", to: "/about" },
-    { key: "test", name: "test", to: "/test" },
   ];
 
   return (
