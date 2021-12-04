@@ -1,7 +1,8 @@
 import React from "react";
+import BooksList from "@Components/BooksList";
 
-function Home() {
-  return <h2>Home</h2>;
-}
+const Home = () => {
+  return <BooksList />;
+};
 
 export default Home;

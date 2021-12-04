@@ -1,6 +1,7 @@
 import React from "react";
 import "./MainMenu.scss";
 import { Routes, Route } from "react-router-dom";
+import styled from "styled-components";
 import Menu from "@Components/Menu";
 import Home from "@Components/Home";
 import About from "@Components/About";

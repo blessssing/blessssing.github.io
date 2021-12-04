@@ -1,7 +1,6 @@
 import React from "react";
 import "./BooksListItem.scss";
 import { useDispatch } from "react-redux";
-
 import { Button } from "semantic-ui-react";
 import { addBookToCart } from "@reducers/cartSlice";
 

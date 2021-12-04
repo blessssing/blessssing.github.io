@@ -5,6 +5,7 @@ const StyledSectionOuter = styled.section`
   display: ${({ display }) => display || "flex"};
   justify-content: ${({ justify }) => justify || "center"};
   max-width: ${({ maxWidth }) => maxWidth || "1900px"};
+  flex-grow: ${({ grow }) => grow || 0};
 `;
 
 const StyledSectionInner = styled.section`
@@ -16,7 +17,7 @@ const StyledSectionInner = styled.section`
 
 const Section = (props) => {
   return (
-    <StyledSectionOuter>
+    <StyledSectionOuter grow={1}>
       <StyledSectionInner {...props} />
     </StyledSectionOuter>
   );
