@@ -1,0 +1,41 @@
+.cart-container {
+}
+
+.cart {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+
+  &__book {
+    display: flex;
+
+    &__wrapper-image {
+      flex-shrink: 0;
+      width: 140px;
+      height: 180px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      padding: 1rem 0.8rem;
+      border: 1px solid black;
+      gap: 0.5rem;
+
+      .btn-wrapper {
+        display: flex;
+        justify-content: center;
+
+        .btn-buy {
+          color: palevioletred;
+        }
+      }
+    }
+  }
+}

@@ -1,34 +1,36 @@
 import React from "react";
+import "./Cart.scss";
 import { useSelector } from "react-redux";
 
 const Cart = () => {
   const { cart } = useSelector((state) => state.cart);
 
   return (
-    <div>
+    <div className={"cart-container cart"}>
       {(cart.length &&
         cart.map(
           ({ article, title, description, age, author, img, price }, index) => (
-            <div key={article + index}>
-              <div>
-                <span>
-                  (Art. {article})&nbsp;{title}
-                </span>
-              </div>
-              <div className={"wrapper-image"}>
+            <div key={article + index} className={"cart__book"}>
+              <div className={"cart__book__wrapper-image"}>
                 <img src={img} alt={img} />
               </div>
-              <div>
-                <span>{author}</span>
+              <div className={"cart__book__info"}>
+                <div>
+                  <span>(Art. {article})</span>
+                </div>
+                <div>
+                  <span>{title}</span>
+                </div>
+                <div>
+                  <span>{author}</span>
+                </div>
+                <div>
+                  <span>Age group: {age}</span>
+                </div>
+                <div className={"btn-wrapper"}>
+                  <button className={"btn-buy"}>buy $&nbsp;{price}</button>
+                </div>
               </div>
-              <div>
-                <span>{age}</span>
-              </div>
-              <div>
-                <span>{description}</span>
-              </div>
-              <button>buy</button>
-              <span>$&nbsp;{price}</span>
             </div>
           )
         )) || <div>Cart is empty</div>}
