@@ -1,15 +1,16 @@
 import React from "react";
 import "./Cart.scss";
 import { useSelector } from "react-redux";
+import Order from "@Components/Order";
 
 const Cart = () => {
   const { cart } = useSelector((state) => state.cart);
 
   return (
-    <div className={"cart-container cart"}>
-      {(cart.length &&
-        cart.map(
-          ({ article, title, description, age, author, img, price }, index) => (
+    <>
+      <div className={"cart-container cart"}>
+        {(cart.length &&
+          cart.map(({ article, title, age, author, img, price }, index) => (
             <div key={article + index} className={"cart__book"}>
               <div className={"cart__book__wrapper-image"}>
                 <img src={img} alt={img} />
@@ -27,14 +28,16 @@ const Cart = () => {
                 <div>
                   <span>Age group: {age}</span>
                 </div>
-                <div className={"btn-wrapper"}>
-                  <button className={"btn-buy"}>buy $&nbsp;{price}</button>
+                <div>
+                  <span>Price $&nbsp;{price}</span>
                 </div>
               </div>
             </div>
-          )
-        )) || <div>Cart is empty</div>}
-    </div>
+          ))) || <div>Cart is empty</div>}
+      </div>
+
+      {cart.length && <Order />}
+    </>
   );
 };
 

@@ -8,15 +8,15 @@ const StyledAddBookBtn = styled.button`
   margin: 10px 20px;
   padding: 1.2rem 2.8rem;
   color: #fff;
-  border: 1px solid black;
+  border: 0;
   border-radius: 5px;
-  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
-  transition: all 150ms ease-in-out;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  transition: all 0.25s ease-in-out;
 
   &:hover {
     color: #202020;

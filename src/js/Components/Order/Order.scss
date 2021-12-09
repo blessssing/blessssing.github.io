@@ -1,0 +1,28 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins/mixins";
+
+.order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+
+  &__buy-btn {
+    display: block;
+    padding: 1.1rem 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    background: #7bc74d;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 #7bc74d;
+    @include borderRadius(5px);
+    @include transition(0.25s);
+
+    &:hover {
+      background: lighten(#7bc74d, 5%);
+      box-shadow: 0 0 10px 2px #7bc74d;
+    }
+  }
+}

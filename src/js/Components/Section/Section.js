@@ -6,6 +6,10 @@ const StyledSectionOuter = styled.section`
   justify-content: ${({ justify }) => justify || "center"};
   max-width: ${({ maxWidth }) => maxWidth || "1900px"};
   flex-grow: ${({ grow }) => grow || 0};
+
+  @media ${(props) => props.theme.media.tablet} {
+    padding: 0 1rem 1.5rem;
+  }
 `;
 
 const StyledSectionInner = styled.section`

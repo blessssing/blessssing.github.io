@@ -3,6 +3,7 @@ import styled from "styled-components";
 import MainMenu from "@Components/MainMenu";
 import HeaderSection from "@Components/HeaderSection";
 import Footer from "@Components/Footer";
+import Menu from "@Components/Menu";
 
 const StyledWrapperCentered = styled.div`
   display: flex;
@@ -22,9 +23,15 @@ const WrapperApp = (props) => {
 };
 
 const App = () => {
+  const navigation = [
+    { key: "home", name: "Home", to: "/" },
+    { key: "about", name: "About", to: "/about" },
+  ];
+
   return (
     <WrapperApp>
       <HeaderSection />
+      <Menu navigation={navigation} />
       <MainMenu />
       <Footer />
     </WrapperApp>

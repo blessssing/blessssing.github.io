@@ -4,10 +4,16 @@
 .cart {
   display: flex;
   flex-flow: row wrap;
-  flex-grow: 1;
+  gap: 2rem;
 
   &__book {
     display: flex;
+    box-shadow: 1px 2px 8px #deb887;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 
     &__wrapper-image {
       flex-shrink: 0;
@@ -23,19 +29,10 @@
     &__info {
       display: flex;
       flex-direction: column;
-      width: 250px;
+      justify-content: space-between;
+      width: 300px;
       padding: 1rem 0.8rem;
-      border: 1px solid black;
       gap: 0.5rem;
-
-      .btn-wrapper {
-        display: flex;
-        justify-content: center;
-
-        .btn-buy {
-          color: palevioletred;
-        }
-      }
     }
   }
 }

@@ -2,7 +2,6 @@ import React from "react";
 import "./MainMenu.scss";
 import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
-import Menu from "@Components/Menu";
 import Home from "@Components/Home";
 import About from "@Components/About";
 import Error404 from "@Components/Error404";
@@ -11,14 +10,8 @@ import CartBtn from "@Components/CartBtn";
 import Cart from "@Components/Cart";
 
 const MainMenu = () => {
-  const navigation = [
-    { key: "home", name: "Home", to: "/" },
-    { key: "about", name: "About", to: "/about" },
-  ];
-
   return (
     <Section>
-      <Menu navigation={navigation} />
       <CartBtn />
 
       <Routes>
