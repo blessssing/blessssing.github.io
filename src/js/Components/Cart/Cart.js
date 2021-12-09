@@ -20,23 +20,23 @@ const Cart = () => {
                   <span>(Art. {article})</span>
                 </div>
                 <div>
-                  <span>{title}</span>
+                  <span>Title: {title}</span>
                 </div>
                 <div>
-                  <span>{author}</span>
+                  <span>Author: {author}</span>
                 </div>
                 <div>
                   <span>Age group: {age}</span>
                 </div>
                 <div>
-                  <span>Price $&nbsp;{price}</span>
+                  <span>Price: $&nbsp;{price}</span>
                 </div>
               </div>
             </div>
-          ))) || <div>Cart is empty</div>}
+          ))) || <h4 style={{ margin: "0 auto" }}>Cart is empty</h4>}
       </div>
 
-      {cart.length && <Order />}
+      {(cart.length && <Order />) || null}
     </>
   );
 };

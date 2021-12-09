@@ -7,6 +7,37 @@
   justify-content: center;
   align-items: center;
   min-height: 150px;
+  margin: 2rem 0;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .order__books-wrapper {
+    .book {
+      border-bottom: 1px solid #deb887;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+
+      .title {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+      .article {
+      }
+
+      .price {
+      }
+    }
+  }
+
+  .total {
+    margin: 3rem 0 2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
 
   &__buy-btn {
     display: block;
