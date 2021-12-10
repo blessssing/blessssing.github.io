@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Order.scss";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { calculateTotal } from "@reducers/cartSlice";
 
 const Order = () => {
-  const { cart } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  const { cart, total } = useSelector((state) => state.cart);
   console.log("cart ", cart);
+
+  useEffect(() => {
+    dispatch(calculateTotal());
+  }, []);
 
   return (
     <div className={"order"}>
@@ -25,7 +31,7 @@ const Order = () => {
           </div>
         ))}
       </div>
-      <div className={"total"}>Total: sum all?</div>
+      <div className={"total"}>Total: $&nbsp;{total}</div>
       <button className={"order__buy-btn"}>Buy</button>
     </div>
   );
