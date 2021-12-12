@@ -11,6 +11,7 @@ const books = [
         author: "Dan Brown",
         img: "images/dan brown inferno.jpg",
         price: 15,
+        isAddedToCart: false,
       },
       {
         id: "2",
@@ -21,6 +22,7 @@ const books = [
         author: "Dan Brown",
         img: "images/dan brown The Lost Symbol.jpg",
         price: 25,
+        isAddedToCart: false,
       },
       {
         id: "3",
@@ -31,6 +33,7 @@ const books = [
         author: "Dan Brown",
         img: "images/dan brown da vinci code.jpg",
         price: 20,
+        isAddedToCart: false,
       },
       {
         id: "4",
@@ -41,6 +44,7 @@ const books = [
         author: "Dan Brown",
         img: "images/dan brown digital fortress.jpg",
         price: 35,
+        isAddedToCart: false,
       },
       {
         id: "5",
@@ -51,6 +55,7 @@ const books = [
         author: "Dan Brown",
         img: "images/dan brown Deception Point.jpg",
         price: 27,
+        isAddedToCart: false,
       },
       {
         id: "6",
@@ -61,6 +66,7 @@ const books = [
         author: "Dan Brown",
         img: "images/dan brown angels and demons.jpg",
         price: 31,
+        isAddedToCart: false,
       },
     ],
   },
@@ -76,6 +82,7 @@ const books = [
         author: "George Oruell",
         img: "images/george oruell 1984.jpg",
         price: 42,
+        isAddedToCart: false,
       },
     ],
   },
@@ -91,6 +98,7 @@ const books = [
         author: "Oldos Hecksley",
         img: "images/oldos hecksley bnw.jpg",
         price: 45,
+        isAddedToCart: false,
       },
     ],
   },
@@ -106,6 +114,7 @@ const books = [
         author: "Michael Bulgakov",
         img: "images/bulgakovmm.jpg",
         price: 38,
+        isAddedToCart: false,
       },
     ],
   },

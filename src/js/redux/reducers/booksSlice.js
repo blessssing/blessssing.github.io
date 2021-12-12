@@ -13,11 +13,36 @@ export const fetchBooks = createAsyncThunk(
   }
 );
 
+export const setAddedToCart = createAsyncThunk(
+  "books/setAddedToCart",
+  async (currentBook, { rejectWithValue, getState }) => {
+    try {
+      const response = await new Promise((resolve) => {
+        console.log("currentBook ", currentBook);
+        console.group("getState");
+        console.log(getState());
+        console.groupEnd("getState");
+        const allBooks = getState().books.allBooks;
+        console.log("allBooks ", allBooks);
+
+        const index = allBooks.findIndex((book) => book.id === currentBook.id);
+        console.log("index", index);
+
+        resolve(index);
+      });
+
+      return response;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
 const booksSlice = createSlice({
   name: "books",
   initialState: {
     books: [],
-    allBooks: [],
+    allBooks: [], //* modify books depth 1 lvl
     status: null,
     isLoaded: false,
     error: null,
@@ -44,6 +69,19 @@ const booksSlice = createSlice({
       state.books = action.payload;
     },
     [fetchBooks.rejected]: (state, action) => {
+      state.status = "rejected";
+      state.error = action.payload;
+    },
+    [setAddedToCart.pending]: (state, action) => {
+      state.status = "loading";
+      state.error = null;
+    },
+    [setAddedToCart.fulfilled]: (state, action) => {
+      state.status = "resolved";
+      console.log("action fulfilled ", action);
+      state.allBooks[action.payload].isAddedToCart = true;
+    },
+    [setAddedToCart.rejected]: (state, action) => {
       state.status = "rejected";
       state.error = action.payload;
     },

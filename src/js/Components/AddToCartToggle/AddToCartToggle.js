@@ -3,6 +3,7 @@ import "./AddToCartToggle.scss";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { addBookToCart } from "@reducers/cartSlice";
+import { setAddedToCart } from "@reducers/booksSlice";
 
 const StyledAddBookBtn = styled.button`
   margin: 10px 20px;
@@ -28,19 +29,16 @@ const AddBookBtn = (props) => {
   return <StyledAddBookBtn {...props} />;
 };
 
-const AddToCartToggle = (props) => {
-  console.log("props ", props);
+const AddToCartToggle = ({ book }) => {
+  const { isAddedToCart } = book;
   const dispatch = useDispatch();
-  const [disabled, setDisabled] = useState(false);
 
   const ActiveBtn = () => {
-    dispatch(addBookToCart(props.book));
-    setDisabled(true);
+    dispatch(addBookToCart(book));
+    dispatch(setAddedToCart(book));
   };
 
-  const DisabledBtn = () => {
-    setDisabled(false);
-  };
+  const DisabledBtn = () => {};
 
   const AddToCart = () => {
     return (
@@ -61,7 +59,7 @@ const AddToCartToggle = (props) => {
     );
   };
 
-  return <>{disabled ? <AddToCartDisabled /> : <AddToCart />}</>;
+  return <>{isAddedToCart ? <AddToCartDisabled /> : <AddToCart />}</>;
 };
 
 export default AddToCartToggle;
