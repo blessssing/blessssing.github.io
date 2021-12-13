@@ -1,26 +1,30 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Container, Button } from "semantic-ui-react";
+import { Icon } from "semantic-ui-react";
 
-const Error404 = (props) => {
+const Error404 = () => {
   const navigate = useNavigate();
 
   return (
-    <Container textAlign="center">
+    <div style={{ textAlign: "center" }}>
       <h1>ERROR 404</h1>
-      <p style={{ fontSize: "1.2rem" }}>
+      <div style={{ fontSize: "1.2rem" }}>
         <Link to="/">Page not Found. Return to Main Page</Link>
-        &nbsp;or&nbsp;&nbsp;
-        <Button
-          onClick={() => {
-            navigate(-1); // going to Back Page
-          }}
-          color="grey"
-        >
-          Go back
-        </Button>
-      </p>
-    </Container>
+        <div>or</div>
+        <div>
+          <Icon
+            onClick={() => {
+              navigate(-1); // going to Back Page
+            }}
+            name="long arrow alternate left"
+            color="brown"
+            size="big"
+            link
+          />
+          <span>Go back</span>
+        </div>
+      </div>
+    </div>
   );
 };
 

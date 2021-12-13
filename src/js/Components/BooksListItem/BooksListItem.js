@@ -18,7 +18,9 @@ const BooksListItem = (props) => {
         <div style={{ fontSize: "1.1rem", fontWeight: "bold" }}>{author}</div>
         <div style={{ fontSize: "0.9rem" }}>{age}</div>
         <div>{description}</div>
-        <div style={{ fontWeight: 600 }}>Price:&nbsp;$&nbsp;{price}</div>
+        <div style={{ fontSize: "1.1rem", fontWeight: 600 }}>
+          Price:&nbsp;$&nbsp;{price}
+        </div>
         <AddToCartToggle book={props} />
       </div>
     </div>
