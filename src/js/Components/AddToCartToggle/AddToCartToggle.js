@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./AddToCartToggle.scss";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import { addBookToCart } from "@reducers/cartSlice";
+import { addBookToCart, removeBookFromCart } from "@reducers/cartSlice";
 import { setAddedToCart, setNotAddedToCart } from "@reducers/booksSlice";
 
 const StyledAddBookBtn = styled.button`
@@ -30,7 +30,7 @@ const AddBookBtn = (props) => {
 };
 
 const AddToCartToggle = ({ book }) => {
-  const { isAddedToCart } = book;
+  const { id, isAddedToCart } = book;
   const dispatch = useDispatch();
 
   const ActiveBtn = () => {
@@ -40,6 +40,7 @@ const AddToCartToggle = ({ book }) => {
 
   const DisabledBtn = () => {
     dispatch(setNotAddedToCart(book));
+    dispatch(removeBookFromCart(id));
   };
 
   const AddToCart = () => {

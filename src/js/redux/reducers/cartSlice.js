@@ -49,6 +49,9 @@ const cartSlice = createSlice({
     addBookToCart: (state, action) => {
       state.cart.push(action.payload);
     },
+    removeBookFromCart: (state, action) => {
+      state.cart = state.cart.filter(({ id }) => id !== action.payload);
+    },
   },
   extraReducers: {
     [calculateTotal.pending]: (state, action) => {
@@ -66,6 +69,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addBookToCart } = cartSlice.actions;
+export const { addBookToCart, removeBookFromCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
