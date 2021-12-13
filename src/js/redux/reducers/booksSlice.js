@@ -38,6 +38,31 @@ export const setAddedToCart = createAsyncThunk(
   }
 );
 
+export const setNotAddedToCart = createAsyncThunk(
+  "books/setNotAddedToCart",
+  async (currentBook, { rejectWithValue, getState }) => {
+    const response = await new Promise((resolve) => {
+      try {
+        console.log("currentBook ", currentBook);
+        console.group("getState");
+        console.log(getState());
+        console.groupEnd("getState");
+        const allBooks = getState().books.allBooks;
+        console.log("allBooks ", allBooks);
+
+        const index = allBooks.findIndex((book) => book.id === currentBook.id);
+        console.log("index", index);
+
+        resolve(index);
+      } catch (error) {
+        return rejectWithValue(error.message);
+      }
+    });
+
+    return response;
+  }
+);
+
 const booksSlice = createSlice({
   name: "books",
   initialState: {
@@ -82,6 +107,18 @@ const booksSlice = createSlice({
       state.allBooks[action.payload].isAddedToCart = true;
     },
     [setAddedToCart.rejected]: (state, action) => {
+      state.status = "rejected";
+      state.error = action.payload;
+    },
+    [setNotAddedToCart.pending]: (state, action) => {
+      state.status = "loading";
+      state.error = null;
+    },
+    [setNotAddedToCart.fulfilled]: (state, action) => {
+      state.status = "resolved";
+      state.allBooks[action.payload].isAddedToCart = false;
+    },
+    [setNotAddedToCart.rejected]: (state, action) => {
       state.status = "rejected";
       state.error = action.payload;
     },

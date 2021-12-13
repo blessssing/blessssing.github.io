@@ -3,7 +3,7 @@ import "./AddToCartToggle.scss";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { addBookToCart } from "@reducers/cartSlice";
-import { setAddedToCart } from "@reducers/booksSlice";
+import { setAddedToCart, setNotAddedToCart } from "@reducers/booksSlice";
 
 const StyledAddBookBtn = styled.button`
   margin: 10px 20px;
@@ -38,7 +38,9 @@ const AddToCartToggle = ({ book }) => {
     dispatch(setAddedToCart(book));
   };
 
-  const DisabledBtn = () => {};
+  const DisabledBtn = () => {
+    dispatch(setNotAddedToCart(book));
+  };
 
   const AddToCart = () => {
     return (
