@@ -4,6 +4,7 @@ export const calculateTotal = createAsyncThunk(
   "cart/calculateTotal",
   async (_, { rejectWithValue, getState }) => {
     try {
+      console.log("cart/calculateTotal");
       console.group("getState");
       console.log(getState());
       console.groupEnd("getState");
@@ -33,16 +34,16 @@ const cartSlice = createSlice({
     total: 0,
     cart: [
       //* plug
-      {
-        id: "8",
-        article: "8",
-        title: "Brawe New World",
-        description: "Далеко-далеко за словесными горами в стране.",
-        age: "16+",
-        author: "Oldos Hecksley",
-        img: "images/oldos hecksley bnw.jpg",
-        price: 45,
-      },
+      // {
+      //   id: "8",
+      //   article: "8",
+      //   title: "Brawe New World",
+      //   description: "Далеко-далеко за словесными горами в стране.",
+      //   age: "16+",
+      //   author: "Oldos Hecksley",
+      //   img: "images/oldos hecksley bnw.jpg",
+      //   price: 45,
+      // },
     ],
   },
   reducers: {

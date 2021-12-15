@@ -35,11 +35,11 @@ const AddToCartToggle = ({ book }) => {
 
   const ActiveBtn = () => {
     dispatch(addBookToCart(book));
-    dispatch(setAddedToCart(book));
+    dispatch(setAddedToCart(id));
   };
 
   const DisabledBtn = () => {
-    dispatch(setNotAddedToCart(book));
+    dispatch(setNotAddedToCart(id));
     dispatch(removeBookFromCart(id));
   };
 

@@ -15,17 +15,17 @@ export const fetchBooks = createAsyncThunk(
 
 export const setAddedToCart = createAsyncThunk(
   "books/setAddedToCart",
-  async (currentBook, { rejectWithValue, getState }) => {
+  async (id, { rejectWithValue, getState }) => {
     try {
       const response = await new Promise((resolve) => {
-        console.log("currentBook ", currentBook);
+        console.log("books/setAddedToCart ", id);
         console.group("getState");
         console.log(getState());
         console.groupEnd("getState");
         const allBooks = getState().books.allBooks;
         console.log("allBooks ", allBooks);
 
-        const index = allBooks.findIndex((book) => book.id === currentBook.id);
+        const index = allBooks.findIndex((book) => book.id === id);
         console.log("index", index);
 
         resolve(index);
@@ -40,17 +40,17 @@ export const setAddedToCart = createAsyncThunk(
 
 export const setNotAddedToCart = createAsyncThunk(
   "books/setNotAddedToCart",
-  async (currentBook, { rejectWithValue, getState }) => {
+  async (id, { rejectWithValue, getState }) => {
     const response = await new Promise((resolve) => {
       try {
-        console.log("currentBook ", currentBook);
+        console.log("books/setNotAddedToCart ", id);
         console.group("getState");
         console.log(getState());
         console.groupEnd("getState");
         const allBooks = getState().books.allBooks;
         console.log("allBooks ", allBooks);
 
-        const index = allBooks.findIndex((book) => book.id === currentBook.id);
+        const index = allBooks.findIndex((book) => book.id === id);
         console.log("index", index);
 
         resolve(index);
@@ -103,7 +103,6 @@ const booksSlice = createSlice({
     },
     [setAddedToCart.fulfilled]: (state, action) => {
       state.status = "resolved";
-      console.log("action fulfilled ", action);
       state.allBooks[action.payload].isAddedToCart = true;
     },
     [setAddedToCart.rejected]: (state, action) => {
