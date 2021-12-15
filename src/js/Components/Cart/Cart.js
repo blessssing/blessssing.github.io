@@ -1,10 +1,16 @@
 import React from "react";
 import "./Cart.scss";
 import { useSelector } from "react-redux";
+import { Icon } from "semantic-ui-react";
+
 import Order from "@Components/Order";
 
 const Cart = () => {
   const { cart } = useSelector((state) => state.cart);
+
+  const moveToTrash = () => {
+    //
+  };
 
   return (
     <>
@@ -31,6 +37,16 @@ const Cart = () => {
                 <div>
                   <span>Price: $&nbsp;{price}</span>
                 </div>
+              </div>
+              <div style={{ display: "flex", padding: "1rem 0" }}>
+                <Icon
+                  style={{ alignSelf: "flex-end" }}
+                  onClick={() => console.log("move to trash")}
+                  name="trash alternate outline"
+                  size="large"
+                  link
+                  color="grey"
+                />
               </div>
             </div>
           ))) || <h4 style={{ margin: "0 auto" }}>Cart is empty</h4>}
