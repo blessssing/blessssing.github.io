@@ -2,22 +2,12 @@ import React from "react";
 import "./Cart.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { Icon } from "semantic-ui-react";
-import { setNotAddedToCart } from "@reducers/booksSlice";
-import { removeBookFromCart, calculateTotal } from "@reducers/cartSlice";
+import { moveToTrash } from "@reducers/cartSlice";
 import Order from "@Components/Order";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state.cart);
-
-  const moveToTrash = (id) => {
-    // TODO may be extract into thunk
-    console.log("id ", id);
-    console.log("move to trash");
-    dispatch(setNotAddedToCart(id));
-    dispatch(removeBookFromCart(id));
-    dispatch(calculateTotal());
-  };
 
   return (
     <>
@@ -48,7 +38,7 @@ const Cart = () => {
               <div style={{ display: "flex", padding: "1rem 0" }}>
                 <Icon
                   style={{ alignSelf: "flex-end" }}
-                  onClick={() => moveToTrash(id)} // TODO
+                  onClick={() => dispatch(moveToTrash(id))}
                   name="trash alternate outline"
                   size="large"
                   link

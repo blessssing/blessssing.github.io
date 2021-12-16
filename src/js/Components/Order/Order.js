@@ -6,7 +6,7 @@ import { calculateTotal } from "@reducers/cartSlice";
 const Order = () => {
   const dispatch = useDispatch();
   const { cart, total } = useSelector((state) => state.cart);
-  console.log("cart ", cart);
+  // console.log("cart ", cart);
 
   useEffect(() => {
     dispatch(calculateTotal());

@@ -18,15 +18,10 @@ export const setAddedToCart = createAsyncThunk(
   async (id, { rejectWithValue, getState }) => {
     try {
       const response = await new Promise((resolve) => {
-        console.log("books/setAddedToCart ", id);
-        console.group("getState");
-        console.log(getState());
-        console.groupEnd("getState");
         const allBooks = getState().books.allBooks;
-        console.log("allBooks ", allBooks);
+        // console.log("allBooks ", allBooks);
 
         const index = allBooks.findIndex((book) => book.id === id);
-        console.log("index", index);
 
         resolve(index);
       });
@@ -43,15 +38,10 @@ export const setNotAddedToCart = createAsyncThunk(
   async (id, { rejectWithValue, getState }) => {
     const response = await new Promise((resolve) => {
       try {
-        console.log("books/setNotAddedToCart ", id);
-        console.group("getState");
-        console.log(getState());
-        console.groupEnd("getState");
         const allBooks = getState().books.allBooks;
-        console.log("allBooks ", allBooks);
+        // console.log("allBooks ", allBooks);
 
         const index = allBooks.findIndex((book) => book.id === id);
-        console.log("index", index);
 
         resolve(index);
       } catch (error) {

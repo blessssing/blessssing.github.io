@@ -29,7 +29,7 @@ const App = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      console.log("App timeout 0.5 sec books");
+      // console.log("App timeout 0.5 sec books");
 
       dispatch(fetchBooks());
     }, 500);

@@ -10,12 +10,12 @@ import Loader from "@Components/Loader";
 const BooksList = () => {
   const dispatch = useDispatch();
   const { allBooks, status, error } = useSelector((state) => state.books);
-  console.log("allBooks ", allBooks);
+  // console.log("allBooks ", allBooks);
 
   useEffect(() => {
     if (!allBooks.length) {
       setTimeout(() => {
-        console.log("BooksList timeout 0.5 sec");
+        // console.log("BooksList timeout 0.5 sec");
 
         // modify books depth 1 lvl
         dispatch(addAllBooks());
