@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { setNotAddedToCart } from "@reducers/booksSlice";
+import { setError, setLoading } from "./statusHandler";
 
 export const calculateTotal = createAsyncThunk(
   "cart/calculateTotal",
@@ -64,29 +65,17 @@ const cartSlice = createSlice({
     },
   },
   extraReducers: {
-    [calculateTotal.pending]: (state, action) => {
-      state.status = "loading";
-      state.error = null;
-    },
+    [calculateTotal.pending]: setLoading,
     [calculateTotal.fulfilled]: (state, action) => {
       state.status = "resolved";
       state.total = action.payload;
     },
-    [calculateTotal.rejected]: (state, action) => {
-      state.status = "rejected";
-      state.error = action.payload;
-    },
-    [moveToTrash.pending]: (state, action) => {
-      state.status = "loading";
-      state.error = null;
-    },
+    [calculateTotal.rejected]: setError,
+    [moveToTrash.pending]: setLoading,
     [moveToTrash.fulfilled]: (state, action) => {
       state.status = "resolved";
     },
-    [moveToTrash.rejected]: (state, action) => {
-      state.status = "rejected";
-      state.error = action.payload;
-    },
+    [moveToTrash.rejected]: setError,
   },
 });
 

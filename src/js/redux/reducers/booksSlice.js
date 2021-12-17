@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import books from "@/js/books";
+import { setError, setLoading } from "./statusHandler";
 
 export const fetchBooks = createAsyncThunk(
   "books/fetchBooks",
@@ -74,43 +75,25 @@ const booksSlice = createSlice({
     },
   },
   extraReducers: {
-    [fetchBooks.pending]: (state, action) => {
-      state.status = "loading";
-      state.error = null;
-    },
+    [fetchBooks.pending]: setLoading,
     [fetchBooks.fulfilled]: (state, action) => {
       state.status = "resolved";
       state.isLoaded = true;
       state.books = action.payload;
     },
-    [fetchBooks.rejected]: (state, action) => {
-      state.status = "rejected";
-      state.error = action.payload;
-    },
-    [setAddedToCart.pending]: (state, action) => {
-      state.status = "loading";
-      state.error = null;
-    },
+    [fetchBooks.rejected]: setError,
+    [setAddedToCart.pending]: setLoading,
     [setAddedToCart.fulfilled]: (state, action) => {
       state.status = "resolved";
       state.allBooks[action.payload].isAddedToCart = true;
     },
-    [setAddedToCart.rejected]: (state, action) => {
-      state.status = "rejected";
-      state.error = action.payload;
-    },
-    [setNotAddedToCart.pending]: (state, action) => {
-      state.status = "loading";
-      state.error = null;
-    },
+    [setAddedToCart.rejected]: setError,
+    [setNotAddedToCart.pending]: setLoading,
     [setNotAddedToCart.fulfilled]: (state, action) => {
       state.status = "resolved";
       state.allBooks[action.payload].isAddedToCart = false;
     },
-    [setNotAddedToCart.rejected]: (state, action) => {
-      state.status = "rejected";
-      state.error = action.payload;
-    },
+    [setNotAddedToCart.rejected]: setError,
   },
 });
 
