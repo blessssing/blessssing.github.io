@@ -23,21 +23,29 @@ const Cart = () => {
                   <span>(Art. {article})</span>
                 </div>
                 <div>
-                  <span>Title: {title}</span>
+                  <span>
+                    <b>Title</b>: {title}
+                  </span>
                 </div>
                 <div>
-                  <span>Author: {author}</span>
+                  <span>
+                    <b>Author:</b> {author}
+                  </span>
                 </div>
                 <div>
-                  <span>Age group: {age}</span>
+                  <span>
+                    <b>Age group:</b> <small>{age}</small>
+                  </span>
                 </div>
-                <div>
-                  <span>Price: $&nbsp;{price}</span>
+                <div className="price">
+                  <span>
+                    <b>Price: $&nbsp;{price}</b>
+                  </span>
                 </div>
               </div>
-              <div style={{ display: "flex", padding: "1rem 0" }}>
+              <div className="icon-group">
                 <Icon
-                  style={{ alignSelf: "flex-end" }}
+                  className="move-to-trash-icon"
                   onClick={() => dispatch(moveToTrash(id))}
                   name="trash alternate outline"
                   size="large"

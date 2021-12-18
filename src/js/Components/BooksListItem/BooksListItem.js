@@ -8,18 +8,22 @@ const BooksListItem = (props) => {
 
   return (
     <div className={"books-list-item books-list-item__container"}>
-      <div>
-        <span style={{ fontSize: "1.2rem" }}>{title}</span>
+      <div className="title">
+        <span>
+          <b>{title}</b>
+        </span>
       </div>
       <div className={"wrapper-image"}>
         <img src={img} alt={img} />
       </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
-        <div style={{ fontSize: "1.1rem", fontWeight: "bold" }}>{author}</div>
-        <div style={{ fontSize: "0.9rem" }}>{age}</div>
+      <div className="info">
+        <div className="author">{author}</div>
+        <div>
+          <small>{age}</small>
+        </div>
         <div>{description}</div>
-        <div style={{ fontSize: "1.1rem", fontWeight: 600 }}>
-          Price:&nbsp;$&nbsp;{price}
+        <div className="price">
+          <b>Price:&nbsp;$&nbsp;{price}</b>
         </div>
         <AddToCartToggle book={props} />
       </div>
