@@ -8,6 +8,7 @@ import Error404 from "@Components/Error404";
 import Section from "@Components/Section";
 import CartBtn from "@Components/CartBtn";
 import Cart from "@Components/Cart";
+import Details from "@Components/Details";
 
 const MainMenu = () => {
   return (
@@ -18,6 +19,7 @@ const MainMenu = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/book/:name" element={<Details />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </Section>

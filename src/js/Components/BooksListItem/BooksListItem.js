@@ -1,10 +1,12 @@
 import React from "react";
 import "./BooksListItem.scss";
+import { useNavigate } from "react-router-dom";
 import { addBookToCart } from "@reducers/cartSlice";
 import AddToCartToggle from "@Components/AddToCartToggle";
 
 const BooksListItem = (props) => {
   const { title, description, age, author, img, price } = props;
+  const navigate = useNavigate();
 
   return (
     <div className={"books-list-item books-list-item__container"}>
@@ -13,7 +15,10 @@ const BooksListItem = (props) => {
           <b>{title}</b>
         </span>
       </div>
-      <div className={"wrapper-image"}>
+      <div
+        className={"wrapper-image"}
+        onClick={() => navigate(`/book/${title}`)}
+      >
         <img src={img} alt={img} />
       </div>
       <div className="info">
