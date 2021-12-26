@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./AddToCartToggle.scss";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
