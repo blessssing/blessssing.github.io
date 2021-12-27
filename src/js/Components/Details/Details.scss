@@ -9,10 +9,10 @@
     display: flex;
     gap: 2rem;
     font-size: 1.1rem;
-    background-color: white;
     border: 1px solid gold;
-    border-radius: 4px;
-    box-shadow: 0 0 20px #d2c7bc;
+    @include borderRadius(4px);
+    background-color: #fff;
+    box-shadow: 1px 2px 8px #c2d545;
 
     &__img-wrapper {
       flex-basis: 290px;
