@@ -5,7 +5,7 @@ import { addBookToCart } from "@reducers/cartSlice";
 import AddToCartToggle from "@Components/AddToCartToggle";
 
 const BooksListItem = (props) => {
-  const { title, description, age, author, img, price } = props;
+  const { title, description, age, genre, author, img, price } = props;
   const navigate = useNavigate();
 
   return (
@@ -23,10 +23,11 @@ const BooksListItem = (props) => {
       </div>
       <div className="info">
         <div className="author">{author}</div>
-        <div>
+        <div className="genre">{genre}</div>
+        <div className="age">
           <small>{age}</small>
         </div>
-        <div>{description}</div>
+        <div className="description">{description}</div>
         <div className="price">
           <b>Price:&nbsp;$&nbsp;{price}</b>
         </div>
