@@ -9,6 +9,7 @@ View project [https://blessssing.github.io/build-books-store](https://blessssing
 ### Used technologies
 
 - React
+- React hooks
 - Redux toolkit
 - Javascript
 - react-router-dom v6
