@@ -2,7 +2,6 @@ import React from "react";
 import "./Cart.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
 import { Icon } from "semantic-ui-react";
 import { moveToTrash } from "@reducers/cartSlice";
 import Order from "@Components/Order";
@@ -51,7 +50,7 @@ const Cart = () => {
                   </div>
                   <div className="price">
                     <span>
-                      <b>Price: $&nbsp;{price}</b>
+                      <b>Цена: &#8381;&nbsp;{price}</b>
                     </span>
                   </div>
                 </div>
@@ -67,7 +66,7 @@ const Cart = () => {
                 </div>
               </div>
             )
-          )) || <h4 style={{ margin: "0 auto" }}>Cart is empty</h4>}
+          )) || <h4 style={{ margin: "0 auto" }}>Корзина пуста</h4>}
       </div>
 
       {(cart.length && <Order />) || null}

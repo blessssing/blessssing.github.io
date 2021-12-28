@@ -4,15 +4,18 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <footer className={"footer"}>
-      <p>
-        <span>Contact us: betterricherhigher@gmail.com</span>
-      </p>
+      <div>
+        <div>Связаться со мной</div>
+        <div>Mail: betterricherhigher@gmail.com</div>
+        <div>Telegram: @blesssssing</div>
+        <div>Skype: Azure</div>
+      </div>
       <p
         style={{
           fontSize: "0.8rem",
         }}
       >
-        <span>All rights reserved 2021.</span>
+        <span>Все права защищены 2022.</span>
       </p>
     </footer>
   );

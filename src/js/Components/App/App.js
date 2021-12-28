@@ -35,8 +35,8 @@ const App = () => {
   }, [dispatch]);
 
   const navigation = [
-    { key: "home", name: "Home", to: "/" },
-    { key: "about", name: "About", to: "/about" },
+    { key: "home", name: "Главная", to: "/" },
+    { key: "about", name: "О нас", to: "/about" },
   ];
 
   return (

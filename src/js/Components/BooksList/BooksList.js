@@ -44,7 +44,7 @@ const BooksList = () => {
         ))) ||
         (error && <h2>Error, can not resolved data: {error}</h2>) || (
           <div className={"wrapper-loader"}>
-            Loading the BooksList ...
+            Загрузка книг ...
             <Loader />
           </div>
         )}

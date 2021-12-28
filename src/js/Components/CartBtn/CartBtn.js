@@ -42,7 +42,7 @@ const CartBtn = () => {
   return (
     <WrapperCartBtn>
       <NavLinkCart to="/cart">
-        <div style={{ fontSize: "1.1rem" }}>Cart</div>
+        <div style={{ fontSize: "1.1rem" }}>Корзина</div>
         <Icon
           name="add to cart"
           size="big"

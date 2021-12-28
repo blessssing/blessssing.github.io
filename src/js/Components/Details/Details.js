@@ -36,7 +36,7 @@ const Details = () => {
           <div className="info-block__description">
             Description: {description}
           </div>
-          <div className="info-block__price">Price: $&nbsp;{price}</div>
+          <div className="info-block__price">Цена: &#8381;&nbsp;{price}</div>
           <AddToCartToggle book={book} />
         </div>
       </div>

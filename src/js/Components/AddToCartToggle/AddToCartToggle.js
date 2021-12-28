@@ -45,7 +45,7 @@ const AddToCartToggle = ({ book }) => {
   const AddToCart = () => {
     return (
       <button className={"add-book-btn add-to-cart-btn"} onClick={ActiveBtn}>
-        Add To Cart
+        Добавить в корзину
       </button>
     );
   };
@@ -56,7 +56,7 @@ const AddToCartToggle = ({ book }) => {
         className={"add-book-btn add-to-cart-disabled-btn"}
         onClick={DisabledBtn}
       >
-        Remove
+        Убрать из корзины
       </button>
     );
   };

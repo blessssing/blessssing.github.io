@@ -5,14 +5,13 @@
   width: 200px;
   align-self: center;
   margin: 10px 20px;
-  padding: 1.2rem 2.8rem;
+  padding: 0.9rem 1.2rem;
   border: 0;
   @include borderRadius(5px);
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
-  text-transform: uppercase;
   transition: all 0.25s ease-in-out;
 }
 

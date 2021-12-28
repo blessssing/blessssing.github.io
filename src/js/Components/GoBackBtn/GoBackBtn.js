@@ -16,7 +16,7 @@ const GoBackBtn = () => {
         size="big"
         link
       />
-      <span>Go back</span>
+      <span>Назад</span>
     </div>
   );
 };

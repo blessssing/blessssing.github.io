@@ -15,7 +15,7 @@ const Order = () => {
   return (
     <div className={"order"}>
       <hr />
-      <h3>Order</h3>
+      <h3>Заказ</h3>
       <div className={"order__books-wrapper"}>
         {cart.map(({ author, title, price }, index) => (
           <div key={title + index} className={"book"}>
@@ -34,9 +34,9 @@ const Order = () => {
         ))}
       </div>
       <div className={"total"}>
-        <b>Total: $&nbsp;{total}</b>
+        <b>Итого: &#8381;&nbsp;{total}</b>
       </div>
-      <button className={"order__buy-btn"}>Buy</button>
+      <button className={"order__buy-btn"}>Купить</button>
     </div>
   );
 };
