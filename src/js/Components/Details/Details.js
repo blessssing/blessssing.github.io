@@ -3,12 +3,13 @@ import "./Details.scss";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import GoBackBtn from "@Components/GoBackBtn";
+import AddToCartToggle from "@Components/AddToCartToggle";
 
 const Details = () => {
   const { name } = useParams();
   const allBooks = useSelector((state) => state.books.allBooks);
-  const { age, article, author, genre, description, img, price, title } =
-    allBooks.find((book) => book.title === name);
+  const book = allBooks.find((book) => book.title === name);
+  const { age, article, author, genre, description, img, price, title } = book;
 
   return (
     <article className="book-details-container">
@@ -36,6 +37,7 @@ const Details = () => {
             Description: {description}
           </div>
           <div className="info-block__price">Price: $&nbsp;{price}</div>
+          <AddToCartToggle book={book} />
         </div>
       </div>
     </article>

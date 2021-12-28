@@ -10,7 +10,6 @@ const StyledAddBookBtn = styled.button`
   padding: 1.2rem 2.8rem;
   color: #fff;
   border: 0;
-  border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 700;
