@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import MainMenu from "@Components/MainMenu";
-import HeaderSection from "@Components/HeaderSection";
 import Footer from "@Components/Footer";
 import Menu from "@Components/Menu";
 import { fetchBooks } from "@reducers/booksSlice";
@@ -42,7 +41,6 @@ const App = () => {
 
   return (
     <WrapperApp>
-      <HeaderSection />
       <Menu navigation={navigation} />
       <MainMenu />
       <Footer />
