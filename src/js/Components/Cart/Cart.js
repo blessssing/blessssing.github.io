@@ -26,26 +26,26 @@ const Cart = () => {
                 </div>
                 <div className={"cart__book__info"}>
                   <div>
-                    <span>(Art. {article})</span>
+                    <span>(Арт. {article})</span>
                   </div>
                   <div>
                     <span>
-                      <b>Title</b>: {title}
+                      <b>Название</b>:&nbsp;{title}
                     </span>
                   </div>
                   <div>
                     <span>
-                      <b>Author:</b> {author}
+                      <b>Автор:</b>&nbsp;{author}
                     </span>
                   </div>
                   <div>
                     <span>
-                      <b>Genre:</b> {genre}
+                      <b>Жанр:</b>&nbsp;{genre}
                     </span>
                   </div>
                   <div style={{ fontSize: "0.9rem" }}>
                     <span>
-                      Age group: <small>{age}</small>
+                      Возрастная категория:&nbsp;<small>{age}</small>
                     </span>
                   </div>
                   <div className="price">

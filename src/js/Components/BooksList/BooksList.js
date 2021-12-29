@@ -29,9 +29,9 @@ const BooksList = () => {
         allBooks.map((book) => (
           <div className={"wrapper-book"} key={book.title}>
             <Spring
-              from={{ opacity: 0 }}
+              from={{ opacity: 0.3 }}
               to={{ opacity: 1 }}
-              config={{ duration: 1000 }}
+              config={{ duration: 100 }}
               key={book.title}
             >
               {(styles) => (

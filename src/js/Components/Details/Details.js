@@ -22,19 +22,19 @@ const Details = () => {
         <div className="info-block">
           <div className="info-block__title">
             <span className="title">{title}</span>&nbsp;&nbsp;&nbsp;
-            <span className="article">(Art. {article})</span>
+            <span className="article">(Арт. {article})</span>
           </div>
           <div className="info-block__author">
-            <b>Author:</b> {author}
+            <b>Автор:</b>&nbsp;{author}
           </div>
           <div className="info-block__genre">
-            <b>Genre:</b> {genre}
+            <b>Жанр:</b>&nbsp;{genre}
           </div>
           <div className="info-block__age">
-            Age: <small>{age}</small>
+            <b>Возрастная категория:</b>&nbsp;<small>{age}</small>
           </div>
           <div className="info-block__description">
-            Description: {description}
+            <b>Описание:</b>&nbsp;{description}
           </div>
           <div className="info-block__price">Цена: &#8381;&nbsp;{price}</div>
           <AddToCartToggle book={book} />

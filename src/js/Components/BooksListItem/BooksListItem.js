@@ -23,7 +23,10 @@ const BooksListItem = (props) => {
       </div>
       <div className="info">
         <div className="author">{author}</div>
-        <div className="genre">{genre}</div>
+        <div className="genre">
+          <b>Жанр:&nbsp;</b>
+          {genre}
+        </div>
         <div className="age">
           <small>{age}</small>
         </div>

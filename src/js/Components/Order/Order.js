@@ -28,7 +28,7 @@ const Order = () => {
               <span className={"author"}>{author}</span>
             </div>
             <div>
-              <span className={"price"}>$&nbsp;{price}</span>
+              <span className={"price"}>&#8381;&nbsp;{price}</span>
             </div>
           </div>
         ))}
