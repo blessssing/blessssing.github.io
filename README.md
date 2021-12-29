@@ -1,4 +1,4 @@
-View project [https://blessssing.github.io/build-books-store](https://blessssing.github.io/build-books-store)
+View project [https://blessssing.github.io](https://blessssing.github.io)
 
 ### Demo project in which there is:
 
