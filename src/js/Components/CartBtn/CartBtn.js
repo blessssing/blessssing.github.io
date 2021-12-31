@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Icon } from "semantic-ui-react";
+import { Icon, Label } from "semantic-ui-react";
 import styled from "styled-components";
 
 const StyledNavLinkCart = styled(NavLink)`
@@ -41,7 +41,7 @@ const WrapperCartBtn = (props) => {
 const CartBtn = () => {
   return (
     <WrapperCartBtn>
-      <NavLinkCart to="/cart">
+      <NavLinkCart to="/cart" style={{ position: "relative" }}>
         <div style={{ fontSize: "1.1rem" }}>Корзина</div>
         <Icon
           name="add to cart"
@@ -50,6 +50,9 @@ const CartBtn = () => {
           color="olive"
           link
         />
+        <Label circular floating color="teal">
+          23
+        </Label>
       </NavLinkCart>
     </WrapperCartBtn>
   );
