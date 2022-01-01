@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { Icon, Label } from "semantic-ui-react";
 import styled from "styled-components";
@@ -39,6 +40,8 @@ const WrapperCartBtn = (props) => {
 };
 
 const CartBtn = () => {
+  const countBooks = useSelector((state) => state.cart.cart.length);
+
   return (
     <WrapperCartBtn>
       <NavLinkCart to="/cart" style={{ position: "relative" }}>
@@ -51,7 +54,7 @@ const CartBtn = () => {
           link
         />
         <Label circular floating color="teal">
-          23
+          {countBooks || 0}
         </Label>
       </NavLinkCart>
     </WrapperCartBtn>
