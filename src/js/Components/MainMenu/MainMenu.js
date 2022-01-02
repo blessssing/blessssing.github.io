@@ -9,11 +9,21 @@ import Section from "@Components/Section";
 import CartBtn from "@Components/CartBtn";
 import Cart from "@Components/Cart";
 import Details from "@Components/Details";
+import Search from "@Components/Search";
+import Flex from "@Components/Flex";
 
 const MainMenu = () => {
   return (
     <Section>
-      <CartBtn />
+      <Flex
+        justify="space-between"
+        alignItems="center"
+        padding="1.3rem 1rem 1rem"
+        gap="0.5rem"
+      >
+        <Search />
+        <CartBtn />
+      </Flex>
 
       <Routes>
         <Route path="/" element={<Home />} />

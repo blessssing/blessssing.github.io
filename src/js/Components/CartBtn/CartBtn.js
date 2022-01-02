@@ -23,41 +23,27 @@ const StyledNavLinkCart = styled(NavLink)`
   }
 `;
 
-const StyledCart = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 1rem;
-  gap: 0.5rem;
-`;
-
 const NavLinkCart = (props) => {
   return <StyledNavLinkCart {...props} />;
-};
-
-const WrapperCartBtn = (props) => {
-  return <StyledCart {...props} />;
 };
 
 const CartBtn = () => {
   const countBooks = useSelector((state) => state.cart.cart.length);
 
   return (
-    <WrapperCartBtn>
-      <NavLinkCart to="/cart" style={{ position: "relative" }}>
-        <div style={{ fontSize: "1.1rem" }}>Корзина</div>
-        <Icon
-          name="add to cart"
-          size="big"
-          flipped="horizontally"
-          color="olive"
-          link
-        />
-        <Label circular floating color="teal">
-          {countBooks || 0}
-        </Label>
-      </NavLinkCart>
-    </WrapperCartBtn>
+    <NavLinkCart to="/cart" style={{ position: "relative" }}>
+      <div style={{ fontSize: "1.1rem" }}>Корзина</div>
+      <Icon
+        name="add to cart"
+        size="big"
+        flipped="horizontally"
+        color="olive"
+        link
+      />
+      <Label circular floating color="teal">
+        {countBooks || 0}
+      </Label>
+    </NavLinkCart>
   );
 };
 
