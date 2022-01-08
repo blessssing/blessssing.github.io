@@ -2,14 +2,24 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const search = createAsyncThunk(
   "search/search",
-  async (inputValue, { rejectWithValue }) => {
+  async (inputValue, { rejectWithValue, getState }) => {
     try {
+      const { allBooks } = getState().books;
+      const filtered = [...allBooks].filter((book) => {
+        return (
+          book.title.toLowerCase().includes(inputValue.toLowerCase()) ||
+          book.author.toLowerCase().includes(inputValue.toLowerCase())
+        );
+      });
+      console.log("filtered ", filtered);
+
       const response = await new Promise((resolve) => {
         setTimeout(() => {
           resolve(inputValue);
-        });
-      }, 2000);
-      return response;
+        }, 10);
+      });
+
+      return { filtered, response };
     } catch (e) {
       return rejectWithValue(e.message);
     }
@@ -36,7 +46,12 @@ const searchSlice = createSlice({
       console.log("action ", action);
       state.status = "resolved";
       state.isLoading = false;
-      state.value = action.payload;
+      state.value = action.payload.response;
+      if (!action.payload.response) {
+        state.results = [];
+      } else {
+        state.results = action.payload.filtered;
+      }
     },
     [search.rejected]: (state, action) => {
       state.status = "rejected";
