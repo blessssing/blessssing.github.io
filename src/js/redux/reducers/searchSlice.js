@@ -11,7 +11,6 @@ export const search = createAsyncThunk(
           book.author.toLowerCase().includes(inputValue.toLowerCase())
         );
       });
-      console.log("filtered ", filtered);
 
       const response = await new Promise((resolve) => {
         setTimeout(() => {
@@ -43,7 +42,6 @@ const searchSlice = createSlice({
       state.isLoading = true;
     },
     [search.fulfilled]: (state, action) => {
-      console.log("action ", action);
       state.status = "resolved";
       state.isLoading = false;
       state.value = action.payload.response;
