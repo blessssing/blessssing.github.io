@@ -6,6 +6,7 @@ const StyledFlex = styled.div`
   justify-content: ${({ justify }) => justify || "flex-start"};
   align-items: ${({ alignItems }) => alignItems || "flex-start"};
   padding: ${({ padding }) => padding || 0};
+  margin: ${({ margin }) => margin || 0};
   gap: ${({ gap }) => gap || 0};
 `;
 

@@ -3,6 +3,10 @@
 
 .menu {
   &__container {
+    position: fixed;
+    z-index: 999999;
+    max-width: 1172px;
+    width: 100%;
     background-color: white;
     border: 1px solid #c5c5c6;
     box-shadow: 0 2px 4px #bac65f;
@@ -18,7 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.2rem;
-    padding: 0.8rem;
+    padding: 1.3rem 1rem;
   }
 }
 

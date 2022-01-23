@@ -18,6 +18,7 @@ const MainMenu = () => {
       <Flex
         justify="space-between"
         alignItems="center"
+        margin="60px 0 0"
         padding="1.3rem 1rem 1rem"
         gap="0.5rem"
       >
