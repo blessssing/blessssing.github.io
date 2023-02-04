@@ -1,35 +1,35 @@
 @import "@styles/variables.scss";
 @import "@styles/mixins/mixins";
 
-.add-book-btn {
+.card-book-btn {
   width: 200px;
   align-self: center;
   margin: 10px 20px;
-  padding: 0.9rem 1.2rem;
+  padding: 0.6rem 1rem;
   border: 0;
-  @include borderRadius(5px);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-align: center;
-  transition: all 0.25s ease-in-out;
+  @include borderRadius(5px);
+  @include transition(0.25s);
 }
 
 .add-to-cart-btn {
   color: #fff;
-  background-color: #3498db;
+  background-color: $color100;
 
   &:hover {
-    box-shadow: 0 0 15px 2px #3498db;
+    box-shadow: 0 0 3px 1px $color100;
   }
 }
 
-.add-to-cart-disabled-btn {
-  color: #5a5a5a;
-  background-color: #e0e1e2;
+.remove-from-cart-btn {
+  color: $color-white;
+  background-color: $color400;
 
   &:hover {
-    color: #202020;
-    box-shadow: 0 0 5px 0 #d2d3d4 inset, 0 0 15px 2px #d2d3d4;
+    background-color: lighten($color400, 5%);
+    box-shadow: 0 0 5px 0 $color400 inset, 0 0 3px 1px $color400;
   }
 }

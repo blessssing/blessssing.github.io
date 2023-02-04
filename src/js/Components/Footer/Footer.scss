@@ -1,6 +1,30 @@
+@import "@styles/variables.scss";
+
 .footer {
   padding: 20px 15px 35px;
-  background: #58616e;
+  background: $color300;
   color: white;
   text-align: center;
+
+  .social-container {
+    line-height: 1.5;
+    .social {
+      .link {
+        color: #fbbd08;
+
+        &:hover {
+          color: lighten(#fbbd08, 8%);
+        }
+      }
+    }
+
+    .title {
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  .rights {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
 }

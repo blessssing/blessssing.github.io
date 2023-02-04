@@ -3,20 +3,22 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <footer className={"footer"}>
-      <div>
-        <div>Связаться со мной</div>
-        <div>Mail: betterricherhigher@gmail.com</div>
-        <div>Telegram: @blesssssing</div>
-        <div>Skype: Azure</div>
+    <footer className="footer">
+      <div className="social-container">
+        <h5 className="social title">Связаться со мной</h5>
+
+        <div className="social">
+          Telegram: @blesssssing&nbsp;&nbsp;&nbsp;
+          <a className="link" href="https://t.me/blesssssing" target="_blank">
+            https://t.me/blesssssing
+          </a>
+        </div>
+        <div className="social">Skype: Azure</div>
+        <div className="social">Mail: betterricherhigher@gmail.com</div>
       </div>
-      <p
-        style={{
-          fontSize: "0.8rem",
-        }}
-      >
-        <span>Все права защищены 2022.</span>
-      </p>
+      <div className="rights">
+        <span>Все права защищены 2023.</span>
+      </div>
     </footer>
   );
 };

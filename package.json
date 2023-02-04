@@ -1,7 +1,7 @@
 {
-  "name": "webpack-course-2020",
+  "name": "book-store",
   "version": "1.0.0",
-  "description": "webpack course",
+  "description": "book-store",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
@@ -58,13 +58,11 @@
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
     "@reduxjs/toolkit": "^1.6.2",
-    "bootstrap": "^5.0.1",
     "normalize.css": "^8.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.0.0",
-    "react-spring": "^9.3.1",
     "redux-logger": "^3.0.6",
     "sass": "^1.58.0"
   }
