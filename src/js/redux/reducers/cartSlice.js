@@ -42,19 +42,7 @@ const cartSlice = createSlice({
     status: null,
     error: null,
     total: 0,
-    cart: [
-      //* plug
-      // {
-      //   id: "8",
-      //   article: "8",
-      //   title: "Brawe New World",
-      //   description: "Далеко-далеко за словесными горами в стране.",
-      //   age: "16+",
-      //   author: "Oldos Hecksley",
-      //   img: "images/oldos hecksley bnw.jpg",
-      //   price: 45,
-      // },
-    ],
+    cart: [],
   },
   reducers: {
     addBookToCart: (state, action) => {
