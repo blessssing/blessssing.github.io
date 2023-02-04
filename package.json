@@ -4,11 +4,11 @@
   "description": "book-store",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --mode development",
-    "build": "cross-env NODE_ENV=production webpack --mode production",
-    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
-    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json"
+    "dev": "cross-env NODE_ENV=development webpack --mode development --openssl-legacy-provider start",
+    "build": "cross-env NODE_ENV=production webpack --mode production --openssl-legacy-provider start",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch --openssl-legacy-provider start",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --openssl-legacy-provider start",
+    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json --openssl-legacy-provider start"
   },
   "browserslist": "> 0.25%, not dead",
   "keywords": [
@@ -35,6 +35,7 @@
     "eslint-loader": "^3.0.3",
     "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^5.0.2",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
