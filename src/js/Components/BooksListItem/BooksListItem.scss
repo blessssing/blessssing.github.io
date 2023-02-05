@@ -26,7 +26,7 @@
     .title {
       margin-bottom: 8px;
       padding: 0.5rem;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: $color-white;
       background-color: $color600;
       @include borderRadius(6px);
@@ -48,12 +48,14 @@
 
     .info {
       display: flex;
+      flex-grow: 1;
       flex-direction: column;
+      justify-content: space-between;
       gap: 3px;
 
       .author {
         margin-bottom: 0.5rem;
-        font-size: 1.2rem;
+        font-size: 1.05rem;
         font-weight: bold;
         line-height: 1.6;
       }
