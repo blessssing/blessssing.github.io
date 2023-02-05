@@ -11,24 +11,30 @@
     row-gap: 5px;
     font-size: 1.1rem;
     text-align: center;
-    border: 1px solid gold;
-    background-color: #f8f8f8;
-    box-shadow: 1px 2px 8px #deb887;
-    @include borderRadius(4px);
+    color: $color-black;
+    box-shadow: 0px 0px 8px $color-grey;
+    @include borderRadius(6px);
     @include transition(0.3s);
+    @include gradient100(35deg);
+    cursor: default;
 
     &:hover {
-      background-color: #fff;
-      box-shadow: 1px 2px 8px #c2d545;
+      background-color: lighten($color200, 5%);
+      box-shadow: 0px 0px 7px lighten($color-grey, 20%);
     }
 
     .title {
+      margin-bottom: 8px;
+      padding: 0.5rem;
       font-size: 1.2rem;
+      color: $color-white;
+      background-color: $color600;
+      @include borderRadius(6px);
     }
 
     .wrapper-image {
-      width: 95%;
-      height: 200px;
+      width: 82%;
+      height: 190px;
       margin: 0 auto;
       cursor: pointer;
 
@@ -36,7 +42,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        @include borderRadius(4px);
+        @include borderRadius(6px);
       }
     }
 
@@ -61,6 +67,7 @@
         height: 95px;
         overflow: hidden;
         text-align: left;
+        line-height: 1.2;
       }
       .price {
         margin-top: 0.5rem;

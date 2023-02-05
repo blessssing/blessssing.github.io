@@ -1,7 +1,6 @@
 import React from "react";
 import "./BooksListItem.scss";
 import { useNavigate } from "react-router-dom";
-import { addBookToCart } from "@reducers/cartSlice";
 import AddToCartToggle from "@Components/AddToCartToggle";
 
 const BooksListItem = (props) => {
