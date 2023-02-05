@@ -43,7 +43,7 @@ const Cart = () => {
                       <b>Жанр:</b>&nbsp;{genre}
                     </span>
                   </div>
-                  <div style={{ fontSize: "0.9rem" }}>
+                  <div className="age-category">
                     <span>
                       Возрастная категория:&nbsp;<small>{age}</small>
                     </span>
