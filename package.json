@@ -7,7 +7,6 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development --openssl-legacy-provider start",
     "build": "cross-env NODE_ENV=production webpack --mode production --openssl-legacy-provider start",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "watch": "cross-env NODE_ENV=development webpack --mode development --watch --openssl-legacy-provider start",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --openssl-legacy-provider start",
