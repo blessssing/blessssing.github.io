@@ -9,10 +9,11 @@
     display: flex;
     gap: 2rem;
     font-size: 1.1rem;
-    border: 1px solid gold;
-    @include borderRadius(4px);
-    background-color: #fff;
-    box-shadow: 1px 2px 8px #c2d545;
+    color: $color-black;
+    box-shadow: 0px 0px 8px $color-grey;
+    @include borderRadius(6px);
+    @include gradient100(35deg);
+    cursor: default;
 
     &__img-wrapper {
       flex-basis: 290px;
@@ -23,7 +24,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        border-radius: 4px;
+        @include borderRadius(6px);
       }
 
       @media (max-width: $screen-sm-max) {
@@ -40,8 +41,11 @@
       padding-right: 1rem;
 
       &__title {
-        font-size: 1.3rem;
+        padding: 0.2rem;
         text-align: center;
+        color: $color-white;
+        background-color: $color600;
+        @include borderRadius(6px);
 
         .title {
           font-weight: bold;
