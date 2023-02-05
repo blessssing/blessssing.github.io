@@ -12,7 +12,7 @@ const Menu = ({ navigation }) => {
               to={to}
               className={"nav-link"}
               style={({ isActive }) => ({
-                backgroundColor: isActive ? "#EAEAEA" : "",
+                backgroundColor: isActive ? "#f9fcd7" : "",
                 color: isActive ? "#21ba45" : "#202020",
                 padding: "0.5rem 0.8rem",
               })}

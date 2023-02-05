@@ -7,14 +7,8 @@
     z-index: 999999;
     max-width: 1172px;
     width: 100%;
-    background-color: white;
-    border: 1px solid #c5c5c6;
-    box-shadow: 0 2px 4px #bac65f;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
+    @include gradient200(90deg);
+    @include borderRadius(4px);
   }
 
   &__wrapper {
@@ -36,7 +30,7 @@
 
   // === animate underline
   &:hover {
-    background-color: #f4f4f4;
+    background-color: #f9fcd7;
     @include transition(0.3s);
   }
 
