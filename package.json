@@ -5,13 +5,13 @@
   "description": "book-store",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development set NODE_OPTIONS=--openssl-legacy-provider webpack --mode development start",
+    "dev": "cross-env NODE_ENV=development NODE_OPTIONS=--openssl-legacy-provider webpack --mode development start",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "deploy": "gh-pages -d dist",
-    "watch": "cross-env NODE_ENV=development set NODE_OPTIONS=--openssl-legacy-provider webpack --mode development --watch start",
-    "start": "cross-env NODE_ENV=development set NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --mode development --open start",
-    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json set NODE_OPTIONS=--openssl-legacy-provider start",
-    "debug": "set NODE_OPTIONS='--openssl-legacy-provider' next dev -p 5000"
+    "watch": "cross-env NODE_ENV=development NODE_OPTIONS=--openssl-legacy-provider webpack --mode development --watch start",
+    "start": "cross-env NODE_ENV=development NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --mode development --open start",
+    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json NODE_OPTIONS=--openssl-legacy-provider start",
+    "debug": "NODE_OPTIONS='--openssl-legacy-provider' next dev -p 5000"
   },
   "browserslist": "> 0.25%, not dead",
   "keywords": [

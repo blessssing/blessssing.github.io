@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import "./Search.scss";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Icon, Loader } from "semantic-ui-react";
 import styled from "styled-components";
-import { search } from "@reducers/searchSlice";
+import useActions from "@hooks/useActions";
 
 const SearchInput = styled.input.attrs({
   placeholder: "search by book or author",
@@ -58,13 +58,13 @@ const SearchIndicator = () => {
 };
 
 const Search = () => {
-  const dispatch = useDispatch();
+  const { search } = useActions();
   const navigate = useNavigate();
   const resultsContainer = useRef();
   const { value, results } = useSelector((state) => state.search);
 
   const handleSearch = (e) => {
-    dispatch(search(e.target.value));
+    search(e.target.value);
     resultsContainer.current.style.display = !results.length ? "none" : "flex";
   };
 

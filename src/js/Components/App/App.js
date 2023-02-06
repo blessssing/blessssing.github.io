@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import MainMenu from "@Components/MainMenu";
 import Footer from "@Components/Footer";
 import Menu from "@Components/Menu";
-import { fetchBooks } from "@reducers/booksSlice";
+import useActions from "@hooks/useActions";
 
 const StyledWrapperCentered = styled.div`
   display: flex;
@@ -24,15 +23,13 @@ const WrapperApp = (props) => {
 };
 
 const App = () => {
-  const dispatch = useDispatch();
+  const { fetchBooks } = useActions();
 
   useEffect(() => {
     setTimeout(() => {
-      // console.log("App timeout 0.5 sec books");
-
-      dispatch(fetchBooks());
+      fetchBooks();
     }, 500);
-  }, [dispatch]);
+  }, []);
 
   const navigation = [
     { key: "home", name: "Главная", to: "/" },

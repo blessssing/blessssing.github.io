@@ -20,7 +20,6 @@ export const setAddedToCart = createAsyncThunk(
     try {
       const response = await new Promise((resolve) => {
         const allBooks = getState().books.allBooks;
-        // console.log("allBooks ", allBooks);
 
         const index = allBooks.findIndex((book) => book.id === id);
 
@@ -40,7 +39,6 @@ export const setNotAddedToCart = createAsyncThunk(
     const response = await new Promise((resolve) => {
       try {
         const allBooks = getState().books.allBooks;
-        // console.log("allBooks ", allBooks);
 
         const index = allBooks.findIndex((book) => book.id === id);
 

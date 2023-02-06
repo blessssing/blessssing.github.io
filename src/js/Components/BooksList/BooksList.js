@@ -1,22 +1,22 @@
 import React, { useEffect } from "react";
 import "./BooksList.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { addAllBooks } from "@reducers/booksSlice";
+import { useSelector } from "react-redux";
+import useActions from "@hooks/useActions";
 import BooksListItem from "@Components/BooksListItem";
 import Loader from "@Components/Loader";
 
 const BooksList = () => {
-  const dispatch = useDispatch();
   const { allBooks, status, error } = useSelector((state) => state.books);
+  const { addAllBooks } = useActions();
 
   useEffect(() => {
     if (!allBooks.length) {
       setTimeout(() => {
         // modify books depth 1 lvl
-        dispatch(addAllBooks());
+        addAllBooks();
       }, 500);
     }
-  }, [dispatch]);
+  }, []);
 
   return (
     <main className={"books-list books-list__container"}>

@@ -1,22 +1,24 @@
 import React from "react";
 import "./AddToCartToggle.scss";
-import { useDispatch } from "react-redux";
-import { addBookToCart, removeBookFromCart } from "@reducers/cartSlice";
-import { setAddedToCart, setNotAddedToCart } from "@reducers/booksSlice";
+import useActions from "@hooks/useActions";
 
 const AddToCartToggle = ({ book }) => {
   const { id, isAddedToCart } = book;
-
-  const dispatch = useDispatch();
+  const {
+    addBookToCart,
+    removeBookFromCart,
+    setAddedToCart,
+    setNotAddedToCart,
+  } = useActions();
 
   const AddToCart = () => {
-    dispatch(addBookToCart(book));
-    dispatch(setAddedToCart(id));
+    addBookToCart(book);
+    setAddedToCart(id);
   };
 
   const RemoveFromCart = () => {
-    dispatch(setNotAddedToCart(id));
-    dispatch(removeBookFromCart(id));
+    setNotAddedToCart(id);
+    removeBookFromCart(id);
   };
 
   const AddToCartBtn = () => (
