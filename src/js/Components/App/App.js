@@ -4,6 +4,7 @@ import MainMenu from "@Components/MainMenu";
 import Footer from "@Components/Footer";
 import Menu from "@Components/Menu";
 import useActions from "@hooks/useActions";
+import SliderCarousel from "@Components/SliderCarousel";
 
 const StyledWrapperCentered = styled.div`
   display: flex;
@@ -38,7 +39,8 @@ const App = () => {
 
   return (
     <WrapperApp>
-      <Menu navigation={navigation} />
+      {/* <Menu navigation={navigation} /> */}
+      <SliderCarousel />
       <MainMenu />
       <Footer />
     </WrapperApp>
