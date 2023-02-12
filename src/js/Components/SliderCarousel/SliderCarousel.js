@@ -4,18 +4,23 @@ import "swiper/swiper-bundle.min.css";
 import Section from "@Components/Section";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const SliderCarousel = () => {
   const { allBooks, status, error } = useSelector((state) => state.books);
-  console.log("allBooks ", allBooks);
+  const navigate = useNavigate();
 
   return (
     <Section>
       {(status === "resolved" && (
         <Swiper
-          slidesPerView={5}
-          spaceBetween={10}
+          breakpoints={{
+            991: { slidesPerView: 5, spaceBetween: 10 },
+            767: { slidesPerView: 4, spaceBetween: 10 },
+            575: { slidesPerView: 3, spaceBetween: 10 },
+            325: { slidesPerView: 2, spaceBetween: 10 },
+          }}
           pagination={{
             clickable: true,
           }}
@@ -30,13 +35,25 @@ const SliderCarousel = () => {
           className="swiper slider-carousel-container"
         >
           <div className="swiper-wrapper wrapper-books">
-            {allBooks.map((item) => (
+            {allBooks.map(({ id, img, title, price }) => (
               <SwiperSlide
-                key={item.id}
+                key={id}
                 className="swiper-slide wrapper-books__item"
               >
                 <div className="wrapper-books__item__wrapper-img">
-                  <img src={item.img} alt={item.img} />
+                  <img src={img} alt={img} />
+                </div>
+
+                <div className="info-block">
+                  <div className="price">Цена:&nbsp;{price}&nbsp;&#8381;</div>
+                  <div className="wrapper-look-btn">
+                    <button
+                      className="look"
+                      onClick={() => navigate(`/book/${title}`)}
+                    >
+                      Посмотреть
+                    </button>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}

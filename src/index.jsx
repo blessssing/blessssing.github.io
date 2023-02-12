@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import App from "@Components/App";
 import "semantic-ui-css/semantic.min.css";
-import "./styles/scss.scss";
+import "@styles/scss.scss";
 import "@styles/variables.scss";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";

@@ -1,26 +1,13 @@
-@import "@styles/variables.scss";
-@import "@styles/mixins/mixins";
-$border: 1px solid #ccc;
+@import "~normalize.css";
 
-// .card {
-//   padding: 1rem;
-//   border-radius: 5px;
-//   margin-top: 1rem;
-//   border: $border;
+@font-face {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-style: normal;
+  src: local("OpenSans"),
+    url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+}
 
-//   h2 {
-//     text-align: center;
-//     color: tomato;
-//   }
-// }
-
-// h1 {
-//   text-align: center;
-//   color: $color-bg-test;
-// }
-
-.pointer {
-  &:hover {
-    cursor: pointer;
-  }
+body {
+  font-family: "Open Sans", sans-serif;
 }
