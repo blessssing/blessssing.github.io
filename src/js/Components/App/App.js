@@ -39,7 +39,7 @@ const App = () => {
 
   return (
     <WrapperApp>
-      {/* <Menu navigation={navigation} /> */}
+      <Menu navigation={navigation} />
       <SliderCarousel />
       <MainMenu />
       <Footer />

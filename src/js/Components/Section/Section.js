@@ -8,7 +8,7 @@ const StyledSectionOuter = styled.section`
   flex-grow: ${({ grow }) => grow || 0};
 
   @media ${(props) => props.theme.media.tablet} {
-    padding: 0 1rem 1.5rem;
+    padding: 0 8px;
   }
 `;
 
@@ -16,7 +16,9 @@ const StyledSectionInner = styled.section`
   display: ${({ display }) => display || "block"};
   max-width: ${({ maxWidth }) => maxWidth || "1200px"};
   width: ${({ width }) => width || "100%"};
-  padding: ${({ padding }) => padding || "0.3rem 0"};
+  margin: ${({ margin }) => margin || "0"};
+
+  padding: ${({ padding }) => padding || "0"};
 `;
 
 const Section = (props) => {

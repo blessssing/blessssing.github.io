@@ -2,7 +2,8 @@
 @import "@styles/mixins/mixins.scss"; //todo
 
 .slider-carousel-container {
-  padding: 1rem 0 2.2rem;
+  margin-top: 58px;
+  padding: 14px 0 26px;
   background: lighten(#efe5c8, 5%);
 
   .wrapper-books {
@@ -59,14 +60,36 @@
   }
 
   .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 0;
+    bottom: 0px;
     @include gradient100(0deg);
 
     &-bullet {
-      background-color: lighten($color200, 8%);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 16px;
+      height: 16px;
       opacity: 1;
+      background-color: #f5ae2ab2;
+      @include transition(0.3s);
 
       &-active {
-        background-color: darken($color200, 38%);
+        background-color: darken($color200, 35%);
+      }
+
+      &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: lighten($color200, 8%);
+        @include borderRadius(50%);
       }
     }
   }

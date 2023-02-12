@@ -23,6 +23,7 @@ const SliderCarousel = () => {
           }}
           pagination={{
             clickable: true,
+            el: ".swiper-pagination",
           }}
           modules={[Navigation, Pagination, Autoplay]}
           speed={1000}
