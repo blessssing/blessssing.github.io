@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "./BooksList.scss";
 import { useSelector } from "react-redux";
 import useActions from "@hooks/useActions";
@@ -9,6 +9,19 @@ import PaginationProduct from "@Components/PaginationProduct";
 const BooksList = () => {
   const { allBooks, status, error } = useSelector((state) => state.books);
   const { addAllBooks } = useActions();
+  const [pagination, setPagination] = useState({
+    limitProductsPerPage: 8,
+    totalProducts: 0,
+    totalPages: 1,
+    activePage: 1,
+    startProduct: 0,
+    endProduct: null,
+  });
+  const { totalPages, activePage, startProduct, endProduct } = pagination;
+
+  const onPageChange = (e, { activePage }) => {
+    setPagination((prev) => ({ ...prev, activePage }));
+  };
 
   useEffect(() => {
     if (!allBooks.length) {
@@ -19,11 +32,40 @@ const BooksList = () => {
     }
   }, []);
 
+  const paginationMemoized = useMemo(
+    () => ({
+      limitProductsPerPage: pagination.limitProductsPerPage,
+      totalProducts: pagination.totalProducts,
+      totalPages: pagination.totalPages,
+      activePage: pagination.activePage,
+      startProduct: pagination.startProduct,
+      endProduct: pagination.endProduct,
+    }),
+    [
+      pagination.limitProductsPerPage,
+      pagination.totalProducts,
+      pagination.totalPages,
+      pagination.activePage,
+      pagination.startProduct,
+      pagination.endProduct,
+    ]
+  );
+  useEffect(() => {
+    setPagination((prev) => ({
+      ...prev,
+      totalProducts: allBooks.length,
+      totalPages: Math.ceil(prev.totalProducts / prev.limitProductsPerPage),
+      startProduct:
+        prev.limitProductsPerPage * prev.activePage - prev.limitProductsPerPage,
+      endProduct: prev.limitProductsPerPage * prev.activePage,
+    }));
+  }, [paginationMemoized, allBooks.length]);
+
   return (
     <>
       <main className={"books-list books-list__container"}>
         {(status === "resolved" &&
-          allBooks.map((book) => (
+          allBooks.slice(startProduct, endProduct).map((book) => (
             <div className={"wrapper-book"} key={book.id}>
               <BooksListItem {...book} />
             </div>
@@ -35,7 +77,13 @@ const BooksList = () => {
             </div>
           )}
       </main>
-      {status === "resolved" && <PaginationProduct />}
+      {status === "resolved" && (
+        <PaginationProduct
+          totalPages={totalPages}
+          onPageChange={onPageChange}
+          defaultActivePage={activePage}
+        />
+      )}
     </>
   );
 };
