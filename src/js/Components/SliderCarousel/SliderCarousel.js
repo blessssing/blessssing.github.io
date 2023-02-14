@@ -36,7 +36,7 @@ const SliderCarousel = () => {
           className="swiper slider-carousel-container"
         >
           <div className="swiper-wrapper wrapper-books">
-            {allBooks.map(({ id, img, title, price }) => (
+            {allBooks.slice(30, 50).map(({ id, img, title, price }) => (
               <SwiperSlide
                 key={id}
                 className="swiper-slide wrapper-books__item"

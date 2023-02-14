@@ -1,7 +1,6 @@
 import React from "react";
 import "./MainMenu.scss";
 import { Routes, Route } from "react-router-dom";
-import styled from "styled-components";
 import Home from "@Components/Home";
 import About from "@Components/About";
 import Error404 from "@Components/Error404";
