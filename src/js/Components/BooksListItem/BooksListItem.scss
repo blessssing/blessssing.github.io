@@ -2,37 +2,38 @@
 @import "@styles/mixins/mixins";
 
 .books-list-item {
+  box-shadow: 0px 0px 3px $color-grey;
+  @include borderRadius(6px);
+  @include gradient100(35deg);
+  cursor: default;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    padding: 5px;
+    margin-bottom: 4px;
+    color: $color-white;
+    background-color: $color600;
+    @include borderTopLeftRadius(6px);
+    @include borderTopRightRadius(6px);
+  }
+
   &__container {
     display: flex;
-    padding: 0.7rem 1rem 1rem;
+    padding: 0 8px;
     flex-basis: 270px;
     flex-shrink: 0;
     flex-direction: column;
-    row-gap: 5px;
+    row-gap: 4px;
     font-size: 1.1rem;
     text-align: center;
     color: $color-black;
-    box-shadow: 0px 0px 8px $color-grey;
-    @include borderRadius(6px);
-    @include transition(0.3s);
-    @include gradient100(35deg);
-    cursor: default;
-
-    &:hover {
-      box-shadow: 0px 0px 7px lighten($color-grey, 20%);
-    }
-
-    .title {
-      margin-bottom: 8px;
-      padding: 0.2rem;
-      color: $color-white;
-      background-color: $color600;
-      @include borderRadius(6px);
-    }
 
     .wrapper-image {
-      width: 82%;
-      height: 190px;
+      width: 72%;
+      height: 150px;
       margin: 0 auto;
       cursor: pointer;
 
