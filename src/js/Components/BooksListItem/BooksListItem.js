@@ -21,15 +21,10 @@ const BooksListItem = (props) => {
           <div className="author">{author}</div>
           <div className="genre">
             <b>Жанр:&nbsp;</b>
-            {genre}
-          </div>
-          <div className="age">
-            <small>{age}</small>
+            {genre}&nbsp;&nbsp;<small>{age}</small>
           </div>
           <div className="description">{description}</div>
-          <div className="price">
-            <b>Цена:&nbsp;{price}&nbsp;&#8381;</b>
-          </div>
+          <div className="price">Цена:&nbsp;{price}&nbsp;&#8381;</div>
           <AddToCartToggle book={props} />
         </div>
       </div>
