@@ -1,11 +1,11 @@
 import React from "react";
-import "./Details.scss";
+import "./BookDetails.scss";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import GoBackBtn from "@Components/GoBackBtn";
 import AddToCartToggle from "@Components/AddToCartToggle";
 
-const Details = () => {
+const BookDetails = () => {
   const { name } = useParams();
   const allBooks = useSelector((state) => state.books.allBooks);
   const book = allBooks.find((book) => book.title === name);
@@ -44,4 +44,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default BookDetails;

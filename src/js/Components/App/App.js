@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import MainMenu from "@Components/MainMenu";
+import MainContent from "@Components/MainContent";
 import Footer from "@Components/Footer";
 import Menu from "@Components/Menu";
 import useActions from "@hooks/useActions";
@@ -41,7 +41,7 @@ const App = () => {
     <WrapperApp>
       <Menu navigation={navigation} />
       <SliderCarousel />
-      <MainMenu />
+      <MainContent />
       <Footer />
     </WrapperApp>
   );
