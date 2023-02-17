@@ -1,0 +1,76 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins/mixins";
+
+.books-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 0px 2px $color-grey;
+  @include borderRadius(6px);
+  @include gradient100(35deg);
+  cursor: default;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 68px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    color: $color-white;
+    background-color: $color600;
+    @include borderTopLeftRadius(6px);
+    @include borderTopRightRadius(6px);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: $color-black300;
+    height: 392px;
+
+    .wrapper-image {
+      width: 72%;
+      height: 150px;
+      margin: 0 auto;
+      cursor: pointer;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include borderRadius(6px);
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      .author {
+        margin-bottom: 3px;
+        font-size: 1.05rem;
+        font-weight: bold;
+        line-height: 1.6;
+      }
+      .genre {
+        font-style: italic;
+      }
+      .description {
+        height: 95px;
+        overflow: hidden;
+        text-align: left;
+        line-height: 1.2;
+      }
+      .price {
+        font-size: 1.05rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import "@styles/variables.scss";
+
+.container-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ui.pagination.menu .active.item {
+  background: $color-green100;
+  color: $color-white;
+
+  &:hover {
+    background: lighten($color-green100, 8%);
+  }
+}
+
+.ui.pagination.menu .item:hover {
+  background: rgba(0, 0, 0, 0.15);
+}

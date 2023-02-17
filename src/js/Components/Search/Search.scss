@@ -1,0 +1,40 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins/mixins";
+
+.search {
+  position: relative;
+
+  &__results-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 0.5rem 0;
+    border: 1px solid #21ba45;
+    background-color: #fafbd2;
+    @include borderRadius(5px);
+    z-index: 9999;
+
+    .results {
+      text-align: end;
+      padding: 0 0.8rem;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: #94999c;
+    }
+
+    .book {
+      border-bottom: 1px solid #cccccc;
+      padding: 0.5rem 0.8rem;
+      @include transition(0.3s);
+
+      &:hover {
+        background-color: #fafba9;
+        cursor: pointer;
+      }
+
+      .header {
+      }
+    }
+  }
+}

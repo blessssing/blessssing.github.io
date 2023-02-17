@@ -1,0 +1,33 @@
+@import "@styles/variables.scss";
+
+@mixin borderRadius($number) {
+  border-radius: $number;
+  -webkit-border-radius: $number;
+  -moz-border-radius: $number;
+  -ms-border-radius: $number;
+  -o-border-radius: $number;
+}
+
+@mixin transition($time) {
+  transition: all $time ease-in-out;
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -ms-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+}
+
+@mixin gradient100($deg) {
+  background: linear-gradient($deg, $color100, $color200);
+}
+
+@mixin gradient200($deg) {
+  background: linear-gradient($deg, #ccd5ae, #fefae0, #faedcd);
+}
+
+@mixin borderTopLeftRadius($number) {
+  border-top-left-radius: $number;
+}
+
+@mixin borderTopRightRadius($number) {
+  border-top-right-radius: $number;
+}

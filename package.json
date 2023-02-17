@@ -1,0 +1,66 @@
+{
+  "homepage": "https://blessssing.github.io",
+  "name": "books-store",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "description": "books-store",
+  "keywords": [
+    "javascript",
+    "react",
+    "redux toolkit",
+    "react-router-dom v6",
+    "scss",
+    "styled-components"
+  ],
+  "author": "Sergey Altukhov",
+  "license": "ISC",
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "test": "react-app-rewired test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "react-app-rewire-alias": "^1.1.7",
+    "react-app-rewired": "^2.2.1",
+    "gh-pages": "^5.0.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.4",
+    "styled-components": "^5.3.1"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "react-redux": "^7.2.8",
+    "react-scripts": "5.0.0",
+    "sass": "^1.58.1",
+    "web-vitals": "^2.1.4",
+    "normalize.css": "^8.0.1",
+    "swiper": "^9.0.4"
+  }
+}

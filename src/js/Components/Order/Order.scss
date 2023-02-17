@@ -1,0 +1,62 @@
+@import "@styles/variables.scss";
+@import "@styles/mixins/mixins";
+
+.order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  margin: 2rem 0;
+
+  hr {
+    width: 100%;
+    height: 1px;
+    background-color: blanchedalmond;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .order__books-wrapper {
+    .book {
+      border-bottom: 1px solid #deb887;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+
+      .title {
+        font-size: 1.2rem;
+      }
+      .author {
+      }
+      .price {
+      }
+    }
+  }
+
+  .total {
+    margin: 3rem 0 2rem;
+    font-size: 1.4rem;
+  }
+
+  &__buy-btn {
+    display: block;
+    padding: 1.1rem 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    background: #7bc74d;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 #7bc74d;
+    @include borderRadius(5px);
+    @include transition(0.25s);
+
+    &:hover {
+      background: lighten(#7bc74d, 5%);
+      box-shadow: 0 0 10px 2px #7bc74d;
+    }
+  }
+}
