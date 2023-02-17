@@ -19,7 +19,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "test": "react-app-rewired test"
   },
   "eslintConfig": {
