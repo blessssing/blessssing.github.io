@@ -9,7 +9,12 @@ const Footer = () => {
 
         <div className="social">
           Telegram: @blesssssing&nbsp;&nbsp;&nbsp;
-          <a className="link" href="https://t.me/blesssssing" target="_blank">
+          <a
+            className="link"
+            href="https://t.me/blesssssing"
+            target="_blank"
+            rel="noreferrer"
+          >
             https://t.me/blesssssing
           </a>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./Menu.scss";
+import { NavLink } from "react-router-dom";
 
 const Menu = ({ navigation }) => {
   return (
@@ -8,15 +8,7 @@ const Menu = ({ navigation }) => {
       <div className={"menu__wrapper"}>
         {navigation.map(({ key, name, to }) => (
           <div key={key}>
-            <NavLink
-              to={to}
-              className={"nav-link"}
-              style={({ isActive }) => ({
-                backgroundColor: isActive ? "#f9fcd7" : "",
-                color: isActive ? "#21ba45" : "#202020",
-                padding: "0.5rem 0.8rem",
-              })}
-            >
+            <NavLink to={to} className={"nav-link"}>
               {name}
             </NavLink>
           </div>

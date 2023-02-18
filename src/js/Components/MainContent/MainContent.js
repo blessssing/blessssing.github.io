@@ -8,6 +8,7 @@ import Section from "@Components/Section";
 import CartBtn from "@Components/CartBtn";
 import Cart from "@Components/Cart";
 import BookDetails from "@Components/BookDetails";
+import AuthorBooks from "@Components/AuthorBooks";
 import Search from "@Components/Search";
 import Flex from "@Components/Flex";
 
@@ -30,6 +31,7 @@ const MainContent = () => {
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/book/:name" element={<BookDetails />} />
+        <Route path="/books/:author" element={<AuthorBooks />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </Section>

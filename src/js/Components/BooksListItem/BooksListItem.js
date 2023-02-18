@@ -1,7 +1,8 @@
 import React from "react";
 import "./BooksListItem.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import AddToCartToggle from "@Components/AddToCartToggle";
+import CustomNavLink from "@Components/CustomNavLink";
 
 const BooksListItem = (props) => {
   const { title, description, age, genre, author, img, price } = props;
@@ -18,7 +19,13 @@ const BooksListItem = (props) => {
           <img src={img} alt={img} />
         </div>
         <div className="info">
-          <div className="author">{author}</div>
+          <CustomNavLink
+            to={`/books/${author}`}
+            className="author"
+            // onClick={() => navigate(`/books/${author}`)}
+          >
+            {author}
+          </CustomNavLink>
           <div className="genre">
             <b>Жанр:&nbsp;</b>
             {genre}&nbsp;&nbsp;<small>{age}</small>
