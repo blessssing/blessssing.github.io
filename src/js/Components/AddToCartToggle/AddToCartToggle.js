@@ -4,13 +4,11 @@ import useActions from "@hooks/useActions";
 import { useNavigate } from "react-router-dom";
 
 const AddToCartToggle = ({ book }) => {
-  const { id } = book;
-  const { addBookToCart, setAddedToCart } = useActions();
+  const { addBookToCart } = useActions();
   const navigate = useNavigate();
 
   const AddToCart = () => {
     addBookToCart(book);
-    setAddedToCart(id);
     navigate(`/cart`);
   };
 

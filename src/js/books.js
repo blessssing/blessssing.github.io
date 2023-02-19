@@ -13,7 +13,6 @@ const books = [
         author: "Дэн Браун",
         img: "/images/books/Инферно.jpg",
         price: 515,
-        isAddedToCart: false,
       },
       {
         id: "2",
@@ -26,7 +25,6 @@ const books = [
         author: "Дэн Браун",
         img: "/images/books/Утраченный символ.jpg",
         price: 285,
-        isAddedToCart: false,
       },
       {
         id: "3",
@@ -39,7 +37,6 @@ const books = [
         author: "Дэн Браун",
         img: "/images/books/Код да Винчи.jpg",
         price: 290,
-        isAddedToCart: false,
       },
       {
         id: "4",
@@ -52,7 +49,6 @@ const books = [
         author: "Дэн Браун",
         img: "/images/books/Цифровая крепость.jpg",
         price: 315,
-        isAddedToCart: false,
       },
       {
         id: "5",
@@ -65,7 +61,6 @@ const books = [
         author: "Дэн Браун",
         img: "/images/books/Точка обмана.jpg",
         price: 277,
-        isAddedToCart: false,
       },
       {
         id: "6",
@@ -78,7 +73,6 @@ const books = [
         author: "Дэн Браун",
         img: "/images/books/Ангелы и демоны.jpg",
         price: 341,
-        isAddedToCart: false,
       },
       {
         id: "7",
@@ -91,7 +85,6 @@ const books = [
         author: "Дэн Браун",
         img: "/images/books/Происхождение.jpg",
         price: 355,
-        isAddedToCart: false,
       },
     ],
   },
@@ -109,7 +102,6 @@ const books = [
         author: "Джордж Оруэлл",
         img: "/images/books/1984.jpg",
         price: 307,
-        isAddedToCart: false,
       },
       {
         id: "9",
@@ -122,7 +114,6 @@ const books = [
         author: "Джордж Оруэлл",
         img: "/images/books/Да здравствует фикус!.jpg",
         price: 337,
-        isAddedToCart: false,
       },
       {
         id: "10",
@@ -135,7 +126,6 @@ const books = [
         author: "Джордж Оруэлл",
         img: "/images/books/Дочь священника.jpg",
         price: 360,
-        isAddedToCart: false,
       },
       {
         id: "11",
@@ -148,7 +138,6 @@ const books = [
         author: "Джордж Оруэлл",
         img: "/images/books/Глотнуть воздуха.jpg",
         price: 385,
-        isAddedToCart: false,
       },
       {
         id: "12",
@@ -161,7 +150,6 @@ const books = [
         author: "Джордж Оруэлл",
         img: "/images/books/Дни в Бирме.jpg",
         price: 355,
-        isAddedToCart: false,
       },
       {
         id: "13",
@@ -174,7 +162,6 @@ const books = [
         author: "Джордж Оруэлл",
         img: "/images/books/Памяти Каталонии. Эссе (сборник).jpg",
         price: 345,
-        isAddedToCart: false,
       },
       {
         id: "14",
@@ -187,7 +174,6 @@ const books = [
         author: "Джордж Оруэлл",
         img: "/images/books/Славно, славно мы резвились.jpg",
         price: 335,
-        isAddedToCart: false,
       },
       {
         id: "15",
@@ -200,7 +186,6 @@ const books = [
         author: "Джордж Оруэлл",
         img: "/images/books/Дорога на Уиган-Пирс.jpg",
         price: 375,
-        isAddedToCart: false,
       },
     ],
   },
@@ -218,7 +203,6 @@ const books = [
         author: "Олдос Хаксли",
         img: "/images/books/О дивный новый мир.jpg",
         price: 405,
-        isAddedToCart: false,
       },
     ],
   },
@@ -236,7 +220,6 @@ const books = [
         author: "Михаил Булгаков",
         img: "/images/books/Мастер и Маргарита.jpg",
         price: 247,
-        isAddedToCart: false,
       },
     ],
   },
@@ -254,7 +237,6 @@ const books = [
         author: "Рэй Брэдбери",
         img: "/images/books/451 градус по Фаренгейту.jpg",
         price: 380,
-        isAddedToCart: false,
       },
     ],
   },
@@ -272,7 +254,6 @@ const books = [
         author: "Сергей Носов",
         img: "/images/books/Одиссея.jpg",
         price: 245,
-        isAddedToCart: false,
       },
     ],
   },
@@ -290,7 +271,6 @@ const books = [
         author: "Тана Френч",
         img: "/images/books/Фейтфул-Плейс.jpg",
         price: 245,
-        isAddedToCart: false,
       },
     ],
   },
@@ -308,7 +288,6 @@ const books = [
         author: "АНОНИМУС",
         img: "/images/books/Дело Зили-султана.jpg",
         price: 280,
-        isAddedToCart: false,
       },
       {
         id: "22",
@@ -321,7 +300,6 @@ const books = [
         author: "АНОНИМУС",
         img: "/images/books/Дело Черных дервишей.jpg",
         price: 270,
-        isAddedToCart: false,
       },
       {
         id: "23",
@@ -334,7 +312,6 @@ const books = [
         author: "АНОНИМУС",
         img: "/images/books/Тайный дневник Михаила Булгакова.jpg",
         price: 295,
-        isAddedToCart: false,
       },
       {
         id: "24",
@@ -347,7 +324,6 @@ const books = [
         author: "АНОНИМУС",
         img: "/images/books/Камень погибели.jpg",
         price: 310,
-        isAddedToCart: false,
       },
       {
         id: "25",
@@ -360,7 +336,6 @@ const books = [
         author: "АНОНИМУС",
         img: "/images/books/Приключения бодхисаттвы.jpg",
         price: 315,
-        isAddedToCart: false,
       },
     ],
   },
@@ -378,7 +353,6 @@ const books = [
         author: "Ильдефонсо Фальконес",
         img: "/images/books/Собор у моря.jpg",
         price: 325,
-        isAddedToCart: false,
       },
       {
         id: "27",
@@ -391,7 +365,6 @@ const books = [
         author: "Ильдефонсо Фальконес",
         img: "/images/books/Живописец душ.jpg",
         price: 305,
-        isAddedToCart: false,
       },
     ],
   },
@@ -409,7 +382,6 @@ const books = [
         author: "Евгений Водолазкин",
         img: "/images/books/Авиатор.jpg",
         price: 245,
-        isAddedToCart: false,
       },
       {
         id: "29",
@@ -422,7 +394,6 @@ const books = [
         author: "Евгений Водолазкин",
         img: "/images/books/Брисбен.jpg",
         price: 255,
-        isAddedToCart: false,
       },
       {
         id: "30",
@@ -435,7 +406,6 @@ const books = [
         author: "Евгений Водолазкин",
         img: "/images/books/Оправдание Острова.jpg",
         price: 280,
-        isAddedToCart: false,
       },
       {
         id: "31",
@@ -448,7 +418,6 @@ const books = [
         author: "Евгений Водолазкин",
         img: "/images/books/Соловьев и Ларионов.jpg",
         price: 270,
-        isAddedToCart: false,
       },
       {
         id: "32",
@@ -461,7 +430,6 @@ const books = [
         author: "Евгений Водолазкин",
         img: "/images/books/Совсем другое время.jpg",
         price: 290,
-        isAddedToCart: false,
       },
       {
         id: "33",
@@ -474,7 +442,6 @@ const books = [
         author: "Евгений Водолазкин",
         img: "/images/books/Идти бестрепетно. Между литературой и жизнью.jpg",
         price: 315,
-        isAddedToCart: false,
       },
       {
         id: "34",
@@ -487,7 +454,6 @@ const books = [
         author: "Евгений Водолазкин",
         img: "/images/books/Лавр.jpg",
         price: 335,
-        isAddedToCart: false,
       },
     ],
   },
@@ -505,7 +471,6 @@ const books = [
         author: "Джеймс Клавелл",
         img: "/images/books/Гайдзин.jpg",
         price: 345,
-        isAddedToCart: false,
       },
       {
         id: "36",
@@ -518,7 +483,6 @@ const books = [
         author: "Джеймс Клавелл",
         img: "/images/books/Благородный Дом. Роман о Гонконге. Книга 1. На краю пропасти.jpg",
         price: 335,
-        isAddedToCart: false,
       },
       {
         id: "37",
@@ -531,7 +495,6 @@ const books = [
         author: "Джеймс Клавелл",
         img: "/images/books/Тайпан.jpg",
         price: 345,
-        isAddedToCart: false,
       },
       {
         id: "38",
@@ -544,7 +507,6 @@ const books = [
         author: "Джеймс Клавелл",
         img: "/images/books/Благородный Дом. Роман о Гонконге. Книга 2. Рискованная игра.jpg",
         price: 370,
-        isAddedToCart: false,
       },
       {
         id: "39",
@@ -557,7 +519,6 @@ const books = [
         author: "Джеймс Клавелл",
         img: "/images/books/Ураган. Книга 1. Потерянный рай.jpg",
         price: 375,
-        isAddedToCart: false,
       },
       {
         id: "40",
@@ -570,7 +531,6 @@ const books = [
         author: "Джеймс Клавелл",
         img: "/images/books/Король крыс.jpg",
         price: 385,
-        isAddedToCart: false,
       },
       {
         id: "41",
@@ -583,7 +543,6 @@ const books = [
         author: "Джеймс Клавелл",
         img: "/images/books/Ураган. Книга 2. Бегство из рая.jpg",
         price: 340,
-        isAddedToCart: false,
       },
       {
         id: "42",
@@ -596,7 +555,6 @@ const books = [
         author: "Джеймс Клавелл",
         img: "/images/books/Сёгун.jpg",
         price: 315,
-        isAddedToCart: false,
       },
     ],
   },
@@ -614,7 +572,6 @@ const books = [
         author: "Дафна дю Морье",
         img: "/images/books/В погоне за счастьем, или Мэри-Энн.jpg",
         price: 415,
-        isAddedToCart: false,
       },
     ],
   },
@@ -632,7 +589,6 @@ const books = [
         author: "Айн Рэнд",
         img: "/images/books/Атлант расправил плечи.jpg",
         price: 549,
-        isAddedToCart: false,
       },
       {
         id: "45",
@@ -645,7 +601,6 @@ const books = [
         author: "Айн Рэнд",
         img: "/images/books/Источник.jpg",
         price: 549,
-        isAddedToCart: false,
       },
       {
         id: "46",
@@ -658,7 +613,6 @@ const books = [
         author: "Айн Рэнд",
         img: "/images/books/Мы живые.jpg",
         price: 549,
-        isAddedToCart: false,
       },
       {
         id: "47",
@@ -671,7 +625,6 @@ const books = [
         author: "Айн Рэнд",
         img: "/images/books/Добродетель эгоизма.jpg",
         price: 529,
-        isAddedToCart: false,
       },
       {
         id: "48",
@@ -684,7 +637,6 @@ const books = [
         author: "Айн Рэнд",
         img: "/images/books/Капитализм. Незнакомый идеал.jpg",
         price: 569,
-        isAddedToCart: false,
       },
       {
         id: "49",
@@ -697,7 +649,6 @@ const books = [
         author: "Айн Рэнд",
         img: "/images/books/Романтический манифест. Философия литературы.jpg",
         price: 539,
-        isAddedToCart: false,
       },
       {
         id: "50",
@@ -710,7 +661,6 @@ const books = [
         author: "Айн Рэнд",
         img: "/images/books/Возвращение примитива. Антииндустриальная революция.jpg",
         price: 549,
-        isAddedToCart: false,
       },
       {
         id: "51",
@@ -723,7 +673,6 @@ const books = [
         author: "Айн Рэнд",
         img: "/images/books/Философия Кому она нужна.jpg",
         price: 549,
-        isAddedToCart: false,
       },
       {
         id: "52",
@@ -736,7 +685,6 @@ const books = [
         author: "Айн Рэнд",
         img: "/images/books/Голос разума. Философия объективизма. Эссе.jpg",
         price: 519,
-        isAddedToCart: false,
       },
     ],
   },
@@ -754,7 +702,6 @@ const books = [
         author: "Габриэль Гарсиа Маркес",
         img: "/images/books/Габриэль Гарсиа Маркес.jpg",
         price: 229,
-        isAddedToCart: false,
       },
       {
         id: "54",
@@ -767,7 +714,6 @@ const books = [
         author: "Габриэль Гарсиа Маркес",
         img: "/images/books/Осень патриарха.jpg",
         price: 549,
-        isAddedToCart: false,
       },
       {
         id: "55",
@@ -780,7 +726,6 @@ const books = [
         author: "Габриэль Гарсиа Маркес",
         img: "/images/books/Полковнику никто не пишет.jpg",
         price: 250,
-        isAddedToCart: false,
       },
       {
         id: "56",
@@ -793,7 +738,6 @@ const books = [
         author: "Габриэль Гарсиа Маркес",
         img: "/images/books/Двенадцать рассказов-странников.jpg",
         price: 380,
-        isAddedToCart: false,
       },
       {
         id: "57",
@@ -806,7 +750,6 @@ const books = [
         author: "Габриэль Гарсиа Маркес",
         img: "/images/books/Рассказ человека, оказавшегося за бортом корабля.jpg",
         price: 370,
-        isAddedToCart: false,
       },
       {
         id: "58",
@@ -819,7 +762,6 @@ const books = [
         author: "Габриэль Гарсиа Маркес",
         img: "/images/books/Палая листва.jpg",
         price: 375,
-        isAddedToCart: false,
       },
     ],
   },
@@ -837,7 +779,6 @@ const books = [
         author: "Эрих Мария Ремарк",
         img: "/images/books/Жизнь взаймы.jpg",
         price: 545,
-        isAddedToCart: false,
       },
       {
         id: "60",
@@ -850,7 +791,6 @@ const books = [
         author: "Эрих Мария Ремарк",
         img: "/images/books/Земля обетованная.jpg",
         price: 595,
-        isAddedToCart: false,
       },
       {
         id: "61",
@@ -863,7 +803,6 @@ const books = [
         author: "Эрих Мария Ремарк",
         img: "/images/books/Три товарища и другие романы.jpg",
         price: 580,
-        isAddedToCart: false,
       },
       {
         id: "62",
@@ -876,7 +815,6 @@ const books = [
         author: "Эрих Мария Ремарк",
         img: "/images/books/Триумфальная арка.jpg",
         price: 625,
-        isAddedToCart: false,
       },
       {
         id: "63",
@@ -889,7 +827,6 @@ const books = [
         author: "Эрих Мария Ремарк",
         img: "/images/books/Приют Грез.jpg",
         price: 615,
-        isAddedToCart: false,
       },
     ],
   },
@@ -907,7 +844,6 @@ const books = [
         author: "Томас Гарди",
         img: "/images/books/В краю лесов.jpg",
         price: 715,
-        isAddedToCart: false,
       },
     ],
   },
@@ -925,7 +861,6 @@ const books = [
         author: "Джек Лондон",
         img: "/images/books/Опасные маршруты.jpg",
         price: 335,
-        isAddedToCart: false,
       },
     ],
   },
@@ -943,7 +878,6 @@ const books = [
         author: "Джеймс Оливер Кервуд",
         img: "/images/books/Золотая петля.jpg",
         price: 435,
-        isAddedToCart: false,
       },
       {
         id: "67",
@@ -956,7 +890,6 @@ const books = [
         author: "Джеймс Оливер Кервуд",
         img: "/images/books/Погоня.jpg",
         price: 415,
-        isAddedToCart: false,
       },
       {
         id: "68",
@@ -969,7 +902,6 @@ const books = [
         author: "Джеймс Оливер Кервуд",
         img: "/images/books/Казан.jpg",
         price: 525,
-        isAddedToCart: false,
       },
       {
         id: "69",
@@ -982,7 +914,6 @@ const books = [
         author: "Джеймс Оливер Кервуд",
         img: "/images/books/Сын Казана.jpg",
         price: 580,
-        isAddedToCart: false,
       },
       {
         id: "70",
@@ -995,7 +926,6 @@ const books = [
         author: "Джеймс Оливер Кервуд",
         img: "/images/books/Тяжелые годы.jpg",
         price: 570,
-        isAddedToCart: false,
       },
       {
         id: "71",
@@ -1008,7 +938,6 @@ const books = [
         author: "Джеймс Оливер Кервуд",
         img: "/images/books/Чёрный Охотник.jpg",
         price: 620,
-        isAddedToCart: false,
       },
       {
         id: "72",
@@ -1021,7 +950,6 @@ const books = [
         author: "Джеймс Оливер Кервуд",
         img: "/images/books/Гризли.jpg",
         price: 380,
-        isAddedToCart: false,
       },
       {
         id: "73",
@@ -1034,7 +962,6 @@ const books = [
         author: "Джеймс Оливер Кервуд",
         img: "/images/books/Долина Молчаливых Призраков.jpg",
         price: 430,
-        isAddedToCart: false,
       },
     ],
   },
@@ -1052,7 +979,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Шагреневая кожа.jpg",
         price: 475,
-        isAddedToCart: false,
       },
       {
         id: "75",
@@ -1065,7 +991,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Утраченные иллюзии.jpg",
         price: 575,
-        isAddedToCart: false,
       },
       {
         id: "76",
@@ -1078,7 +1003,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Блеск и нищета куртизанок.jpg",
         price: 585,
-        isAddedToCart: false,
       },
       {
         id: "77",
@@ -1091,7 +1015,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Гобсек.jpg",
         price: 430,
-        isAddedToCart: false,
       },
       {
         id: "78",
@@ -1104,7 +1027,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Отец Горио.jpg",
         price: 455,
-        isAddedToCart: false,
       },
       {
         id: "79",
@@ -1117,7 +1039,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Тёмное дело.jpg",
         price: 485,
-        isAddedToCart: false,
       },
       {
         id: "80",
@@ -1130,7 +1051,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Сарразин.jpg",
         price: 465,
-        isAddedToCart: false,
       },
       {
         id: "81",
@@ -1143,7 +1063,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Полковник Шабер.jpg",
         price: 365,
-        isAddedToCart: false,
       },
       {
         id: "82",
@@ -1156,7 +1075,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Беатриса.jpg",
         price: 385,
-        isAddedToCart: false,
       },
       {
         id: "83",
@@ -1169,7 +1087,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Мачеха.jpg",
         price: 285,
-        isAddedToCart: false,
       },
       {
         id: "84",
@@ -1182,7 +1099,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Проклятое дитя.jpg",
         price: 425,
-        isAddedToCart: false,
       },
       {
         id: "85",
@@ -1195,7 +1111,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Шуаны, или Бретань в 1799 году.jpg",
         price: 325,
-        isAddedToCart: false,
       },
       {
         id: "86",
@@ -1208,7 +1123,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Вотрен.jpg",
         price: 455,
-        isAddedToCart: false,
       },
       {
         id: "87",
@@ -1221,7 +1135,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Делец.jpg",
         price: 535,
-        isAddedToCart: false,
       },
       {
         id: "88",
@@ -1234,7 +1147,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Гамбара.jpg",
         price: 515,
-        isAddedToCart: false,
       },
       {
         id: "89",
@@ -1247,7 +1159,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Неведомый шедевр.jpg",
         price: 595,
-        isAddedToCart: false,
       },
       {
         id: "90",
@@ -1260,7 +1171,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Искусство и художник.jpg",
         price: 385,
-        isAddedToCart: false,
       },
       {
         id: "91",
@@ -1273,7 +1183,6 @@ const books = [
         author: "Оноре де Бальзак",
         img: "/images/books/Памела Жиро.jpg",
         price: 295,
-        isAddedToCart: false,
       },
     ],
   },

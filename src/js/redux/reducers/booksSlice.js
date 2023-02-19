@@ -14,44 +14,6 @@ export const fetchBooks = createAsyncThunk(
   }
 );
 
-export const setAddedToCart = createAsyncThunk(
-  "books/setAddedToCart",
-  async (id, { rejectWithValue, getState }) => {
-    try {
-      const response = await new Promise((resolve) => {
-        const allBooks = getState().books.allBooks;
-
-        const index = allBooks.findIndex((book) => book.id === id);
-
-        resolve(index);
-      });
-
-      return response;
-    } catch (error) {
-      return rejectWithValue(error.message);
-    }
-  }
-);
-
-export const setNotAddedToCart = createAsyncThunk(
-  "books/setNotAddedToCart",
-  async (id, { rejectWithValue, getState }) => {
-    const response = await new Promise((resolve) => {
-      try {
-        const allBooks = getState().books.allBooks;
-
-        const index = allBooks.findIndex((book) => book.id === id);
-
-        resolve(index);
-      } catch (error) {
-        return rejectWithValue(error.message);
-      }
-    });
-
-    return response;
-  }
-);
-
 const booksSlice = createSlice({
   name: "books",
   initialState: {
@@ -80,18 +42,6 @@ const booksSlice = createSlice({
       state.books = action.payload;
     },
     [fetchBooks.rejected]: setError,
-    [setAddedToCart.pending]: setLoading,
-    [setAddedToCart.fulfilled]: (state, action) => {
-      state.status = "resolved";
-      state.allBooks[action.payload].isAddedToCart = true;
-    },
-    [setAddedToCart.rejected]: setError,
-    [setNotAddedToCart.pending]: setLoading,
-    [setNotAddedToCart.fulfilled]: (state, action) => {
-      state.status = "resolved";
-      state.allBooks[action.payload].isAddedToCart = false;
-    },
-    [setNotAddedToCart.rejected]: setError,
   },
 });
 
