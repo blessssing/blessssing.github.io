@@ -7,7 +7,7 @@
   justify-content: space-between;
   box-shadow: 0px 0px 2px $color-grey;
   @include borderRadius(6px);
-  @include gradient700(0deg);
+  @include gradient250(180deg);
   cursor: default;
 
   .title {

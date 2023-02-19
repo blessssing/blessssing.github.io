@@ -28,24 +28,32 @@
   background: linear-gradient($deg, $color100, $color200);
 }
 
+@mixin gradient150($deg) {
+  background: linear-gradient($deg, #cee49a, #d1e3a5, #d6e4b1);
+}
+
 @mixin gradient200($deg) {
   background: linear-gradient($deg, #ccd5ae, #fefae0, #faedcd);
+}
+
+@mixin gradient250($deg) {
+  background: linear-gradient($deg, #cedeaa, #d4dfbd);
 }
 
 @mixin gradient300($deg) {
   background: linear-gradient($deg, #bdce45, #4e8c32);
 }
 
-@mixin gradient400($deg) {
+@mixin gradient350($deg) {
   background: linear-gradient($deg, #edede9, #f5ebe0, #d5bdaf);
 }
-@mixin gradient500($deg) {
+@mixin gradient400($deg) {
   background: linear-gradient($deg, #ffffff, #f4f0e3, #ede6d0, #bbecb6);
 }
-@mixin gradient600($deg) {
+@mixin gradient450($deg) {
   background: linear-gradient($deg, #afd9f7, #f0f2ff);
 }
-@mixin gradient700($deg) {
+@mixin gradient500($deg) {
   background: linear-gradient(
     $deg,
     #faf594,
@@ -55,6 +63,39 @@
     #fffdda
   );
 }
-@mixin gradient800($deg) {
+@mixin gradient550($deg) {
   background: linear-gradient($deg, #b7d132, #e5f3a0, #ffffff);
+}
+
+@mixin gradient600($deg) {
+  background: linear-gradient(
+    $deg,
+    #bed063,
+    #bdcb74,
+    #c5d188,
+    #c5cf92,
+    #c6cda2
+  );
+}
+
+@mixin gradient650($deg) {
+  background: linear-gradient(
+    $deg,
+    #d7e97c,
+    #d9e989,
+    #d9e794,
+    #d7e2a0,
+    #d8e1a8
+  );
+}
+
+@mixin gradient700($deg) {
+  background: linear-gradient(
+    $deg,
+    #cee88d,
+    #cde493,
+    #d4e9a0,
+    #d5e7a8,
+    #d8e6b3
+  );
 }

@@ -18,7 +18,7 @@
     color: $color-black;
     @include borderRadius(6px);
     @include transition(0.3s);
-    @include gradient100(56deg);
+    @include gradient250(180deg);
     cursor: default;
 
     &:hover {
