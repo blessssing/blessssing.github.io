@@ -7,6 +7,18 @@ $color600: #2c555b;
 $gradient100: linear-gradient(90deg, $color100, $color200);
 $gradient200: linear-gradient(35deg, #ccd5ae, #fefae0, #faedcd);
 $gradient300: linear-gradient(#bdce45, #4e8c32);
+$gradient400: linear-gradient(90deg, #edede9, #f5ebe0, #d5bdaf);
+$gradient500: linear-gradient(90deg, #ffffff, #f4f0e3, #ede6d0, #bbecb6);
+$gradient600: linear-gradient(90deg, #afd9f7, #f0f2ff);
+$gradient700: linear-gradient(
+  90deg,
+  #faf594,
+  #faf5a0,
+  #fcf9b5,
+  #faf7c5,
+  #fffdda
+);
+$gradient800: linear-gradient(90deg, #b7d132, #e5f3a0, #ffffff);
 
 $color-white: #ffffff;
 $color-black: #000;
@@ -21,6 +33,7 @@ $color-blue: #2185d0;
 $color-green: #34b552;
 $color-green100: #80b541;
 $color-green200: #94c45b;
+$color-green300: #7bb736;
 $color-brown100: #b06331;
 $color-brown200: #9f4b14;
 $color-yellow: #f8ffa7;

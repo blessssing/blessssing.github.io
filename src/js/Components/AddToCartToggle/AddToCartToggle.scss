@@ -17,19 +17,10 @@
 }
 
 .add-to-cart-btn {
-  background-color: $color300;
+  background: $color-green300;
 
   &:hover {
-    background-color: lighten($color300, 5%);
-    box-shadow: 0 0 3px 1px $color300;
-  }
-}
-
-.remove-from-cart-btn {
-  background-color: $color400;
-
-  &:hover {
-    background-color: lighten($color400, 5%);
-    box-shadow: 0 0 5px 0 $color400 inset, 0 0 3px 1px $color400;
+    background: lighten($color-green300, 4%);
+    box-shadow: 0 0 3px 1px $color-green300;
   }
 }

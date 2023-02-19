@@ -44,19 +44,18 @@
 
   &__buy-btn {
     display: block;
-    padding: 1.1rem 2.5rem;
+    padding: 14px 30px;
     font-weight: 700;
-    color: #fff;
-    background: #7bc74d;
+    color: $color-white;
+    background: $color-green300;
     border: 0;
     cursor: pointer;
-    box-shadow: 0 0 0 0 #7bc74d;
-    @include borderRadius(5px);
+    @include borderRadius(6px);
     @include transition(0.25s);
 
     &:hover {
-      background: lighten(#7bc74d, 5%);
-      box-shadow: 0 0 10px 2px #7bc74d;
+      background: lighten($color-green300, 4%);
+      box-shadow: 0 0 3px 1px $color-green300;
     }
   }
 }

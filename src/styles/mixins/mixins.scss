@@ -8,6 +8,14 @@
   -o-border-radius: $number;
 }
 
+@mixin borderTopLeftRadius($number) {
+  border-top-left-radius: $number;
+}
+
+@mixin borderTopRightRadius($number) {
+  border-top-right-radius: $number;
+}
+
 @mixin transition($time) {
   transition: all $time ease-in-out;
   -webkit-transition: all $time ease-in-out;
@@ -24,10 +32,29 @@
   background: linear-gradient($deg, #ccd5ae, #fefae0, #faedcd);
 }
 
-@mixin borderTopLeftRadius($number) {
-  border-top-left-radius: $number;
+@mixin gradient300($deg) {
+  background: linear-gradient($deg, #bdce45, #4e8c32);
 }
 
-@mixin borderTopRightRadius($number) {
-  border-top-right-radius: $number;
+@mixin gradient400($deg) {
+  background: linear-gradient($deg, #edede9, #f5ebe0, #d5bdaf);
+}
+@mixin gradient500($deg) {
+  background: linear-gradient($deg, #ffffff, #f4f0e3, #ede6d0, #bbecb6);
+}
+@mixin gradient600($deg) {
+  background: linear-gradient($deg, #afd9f7, #f0f2ff);
+}
+@mixin gradient700($deg) {
+  background: linear-gradient(
+    $deg,
+    #faf594,
+    #faf5a0,
+    #fcf9b5,
+    #faf7c5,
+    #fffdda
+  );
+}
+@mixin gradient800($deg) {
+  background: linear-gradient($deg, #b7d132, #e5f3a0, #ffffff);
 }
