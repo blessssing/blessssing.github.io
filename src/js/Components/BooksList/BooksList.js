@@ -1,34 +1,22 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./BooksList.scss";
-import { useSelector } from "react-redux";
-import useActions from "@hooks/useActions";
+
 import BooksListItem from "@Components/BooksListItem";
 import Loader from "@Components/Loader";
 import PaginationProduct from "@Components/PaginationProduct";
 import { usePagination } from "@hooks/usePagination";
 
-const BooksList = () => {
-  const { allBooks, status, error } = useSelector((state) => state.books);
-  const { addAllBooks } = useActions();
+const BooksList = ({ books, status, error }) => {
   const { pagination, onPageChange, useProductPageData } = usePagination();
   const { totalPages, activePage, startProduct, endProduct } = pagination;
 
-  useEffect(() => {
-    if (!allBooks.length) {
-      setTimeout(() => {
-        // modify books depth 1 lvl
-        addAllBooks();
-      }, 500);
-    }
-  }, []);
-
-  useProductPageData(allBooks.length);
+  useProductPageData(books.length);
 
   return (
     <>
       <main className={"books-list books-list__container"}>
         {(status === "resolved" &&
-          allBooks.slice(startProduct, endProduct).map((book) => (
+          books.slice(startProduct, endProduct).map((book) => (
             <div className={"wrapper-book"} key={book.id}>
               <BooksListItem {...book} />
             </div>

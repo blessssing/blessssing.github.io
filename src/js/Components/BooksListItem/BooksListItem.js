@@ -1,6 +1,6 @@
 import React from "react";
 import "./BooksListItem.scss";
-import { useNavigate, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AddToCartToggle from "@Components/AddToCartToggle";
 import CustomNavLink from "@Components/CustomNavLink";
 

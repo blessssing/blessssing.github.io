@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Icon } from "semantic-ui-react";
 import { moveToTrash } from "@reducers/cartSlice";
 import Order from "@Components/Order";
+import CustomNavLink from "@Components/CustomNavLink";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -33,11 +34,13 @@ const Cart = () => {
                       <b>Название</b>:&nbsp;{title}
                     </span>
                   </div>
-                  <div>
-                    <span>
-                      <b>Автор:</b>&nbsp;{author}
-                    </span>
-                  </div>
+                  <CustomNavLink
+                    to={`/books/${author}`}
+                    className="info-block__author"
+                    // onClick={() => navigate(`/books/${author}`)}
+                  >
+                    <b>Автор:</b>&nbsp;{author}
+                  </CustomNavLink>
                   <div className="genre">
                     <span>
                       <b>Жанр:</b>&nbsp;{genre}

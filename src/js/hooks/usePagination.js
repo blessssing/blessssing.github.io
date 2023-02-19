@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 
 export const usePagination = () => {
   const [pagination, setPagination] = useState({
-    limitProductsPerPage: 8,
+    limitProductsPerPage: 6,
     totalProducts: 0,
     totalPages: 1,
     activePage: 1,

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import GoBackBtn from "@Components/GoBackBtn";
 import AddToCartToggle from "@Components/AddToCartToggle";
+import CustomNavLink from "@Components/CustomNavLink";
 
 const BookDetails = () => {
   const { name } = useParams();
@@ -24,9 +25,13 @@ const BookDetails = () => {
             <span className="title">{title}</span>&nbsp;&nbsp;&nbsp;
             <span className="article">(Арт. {article})</span>
           </div>
-          <div className="info-block__author">
+          <CustomNavLink
+            to={`/books/${author}`}
+            className="info-block__author"
+            // onClick={() => navigate(`/books/${author}`)}
+          >
             <b>Автор:</b>&nbsp;{author}
-          </div>
+          </CustomNavLink>
           <div className="info-block__genre">
             <b>Жанр:</b>&nbsp;{genre}
           </div>
