@@ -1,24 +1,17 @@
 import React from "react";
 import "./AddToCartToggle.scss";
 import useActions from "@hooks/useActions";
+import { useNavigate } from "react-router-dom";
 
 const AddToCartToggle = ({ book }) => {
-  const { id, isAddedToCart } = book;
-  const {
-    addBookToCart,
-    removeBookFromCart,
-    setAddedToCart,
-    setNotAddedToCart,
-  } = useActions();
+  const { id } = book;
+  const { addBookToCart, setAddedToCart } = useActions();
+  const navigate = useNavigate();
 
   const AddToCart = () => {
     addBookToCart(book);
     setAddedToCart(id);
-  };
-
-  const RemoveFromCart = () => {
-    setNotAddedToCart(id);
-    removeBookFromCart(id);
+    navigate(`/cart`);
   };
 
   const AddToCartBtn = () => (
@@ -27,16 +20,7 @@ const AddToCartToggle = ({ book }) => {
     </button>
   );
 
-  const RemoveFromCartBtn = () => (
-    <button
-      className={"card-book-btn remove-from-cart-btn"}
-      onClick={RemoveFromCart}
-    >
-      Убрать из корзины
-    </button>
-  );
-
-  return <>{isAddedToCart ? <RemoveFromCartBtn /> : <AddToCartBtn />}</>;
+  return <AddToCartBtn />;
 };
 
 export default AddToCartToggle;

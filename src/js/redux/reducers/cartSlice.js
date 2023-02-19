@@ -46,7 +46,10 @@ const cartSlice = createSlice({
   },
   reducers: {
     addBookToCart: (state, action) => {
-      state.cart.push(action.payload);
+      const isAddedToCart = state.cart.some(
+        (item) => item.id === action.payload.id
+      );
+      if (!isAddedToCart) state.cart.push(action.payload);
     },
     removeBookFromCart: (state, action) => {
       state.cart = state.cart.filter(({ id }) => id !== action.payload);
