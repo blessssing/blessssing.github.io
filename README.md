@@ -1,12 +1,17 @@
 View project [https://blessssing.github.io](https://blessssing.github.io)
 
-### Demo project in which there is:
+# Project Title
+
+This is demo project that contains:
 
 - Books store
+- Cart
+- Pagination
 - Routing
 - Adaptive layout
+- Slider
 
-### Used technologies
+## 🛠 Skills
 
 - React
 - React hooks
@@ -15,10 +20,40 @@ View project [https://blessssing.github.io](https://blessssing.github.io)
 - react-router-dom v6
 - SCSS
 - Styled-components
+- Semantic-ui
+- Swiper
 
-> Note: ...
+## Run Locally
 
-### `npm start`
+Clone the project
+
+```bash
+  git clone https://github.com/blessssing/blessssing.github.io.git
+```
+
+Go to the project directory
+
+```bash
+  cd blessssing.github.io
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Runs the app in the development mode
+
+```bash
+  npm run start
+```
+
+Builds the app for production.
+
+```bash
+  npm run build
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
