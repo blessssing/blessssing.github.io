@@ -1,15 +1,18 @@
-View project [https://blessssing.github.io](https://blessssing.github.io)
-
-# Project Title
+# Books-store
 
 This is demo project that contains:
 
 - Books store
 - Cart
+- Search book
 - Pagination
 - Routing
 - Adaptive layout
 - Slider
+
+## Demo
+
+Here is a working live demo : [https://blessssing.github.io](https://blessssing.github.io)
 
 ## 🛠 Skills
 
@@ -25,35 +28,23 @@ This is demo project that contains:
 
 ## Run Locally
 
-Clone the project
-
 ```bash
-  git clone https://github.com/blessssing/blessssing.github.io.git
+# Clone this repository
+$ git clone https://github.com/blessssing/blessssing.github.io.git
+
+# Go to the project directory
+$ cd blessssing.github.io
+
+# Install dependencies
+$ npm install
+
+# Runs the app in the development mode
+$ npm run start
 ```
 
-Go to the project directory
-
-```bash
-  cd blessssing.github.io
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Runs the app in the development mode
-
-```bash
-  npm run start
-```
-
-Builds the app for production.
-
-```bash
-  npm run build
-```
-
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+```bash
+# Builds the app for production.
+$ npm run build
+```
